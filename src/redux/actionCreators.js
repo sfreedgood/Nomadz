@@ -6,11 +6,9 @@ function test(val) {
   return {
     type: TEST,
     payload: {
-      message: val
+      test: val
     }
   }
 }
 
-export default {
-  test
-}
+export default test

@@ -17,5 +17,5 @@ const setup = (state = initialState, action) => {
 }
 
 export default combineReducers({
-  setup: setup
+  setup,
 })

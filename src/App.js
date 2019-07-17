@@ -2,12 +2,30 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+//Redux
+import { connect } from "react-redux"
+
+function mapStateToProps (state) {
+  const { test } = state
+  return { test }
+};
+
+function mapDispatchToProps (dispatch) { //list of action-creators to be dispatched
+  return {
+    test: (testVal) => dispatch({type: "TEST", payload: {test: testVal}}), 
+  }
+}
+
+function App({test}) {
+  const testFunc = val => {
+    console.log("Clicked")
+    test(val)
+  }
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
+        <p onClick={() => testFunc(true)}>
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
@@ -23,4 +41,7 @@ function App() {
   );
 }
 
-export default App;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App) //component goes here
