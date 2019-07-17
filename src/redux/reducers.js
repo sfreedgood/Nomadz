@@ -1,7 +1,13 @@
 import { combineReducers} from "redux"
 
 const initialState = {
-  test: false
+  test: false,
+  searchQueries: {
+    where: ["Anywhere", "North America", "South America", "Europe", "Asia/Pacific", "Africa", "Middle East"],
+    when: ["Anytime"],
+    budget: ["Any"],
+    duration: ["Any"]
+  }
 }
 
 const setup = (state = initialState, action) => {
@@ -11,6 +17,9 @@ const setup = (state = initialState, action) => {
       return {
         ...state, test: test
       }
+    // case "":
+    //   const { } = action.payload
+    //   return { }
     default:
       return state
   }

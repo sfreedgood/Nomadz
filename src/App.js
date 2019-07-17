@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Home from './components/home';
+
 
 //Redux
 import { connect } from "react-redux"
@@ -37,6 +39,7 @@ function App({test}) {
           Learn React
         </a>
       </header>
+      <Home />
     </div>
   );
 }
