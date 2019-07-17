@@ -1,6 +1,9 @@
 // Action Types
 const TEST = "TEST"
-const GET_SEARCH_QUERIES = "GET_SEARCH_QUERIES"
+const SET_DURATION = "SET_DURATION"
+const SET_BUDGET = "SET_BUDGET"
+const SET_DATES = "SET_DATES "
+const SET_LOCATION = "SET_LOCATION"
 
 // Action Creators
 function test(val) {
@@ -12,21 +15,46 @@ function test(val) {
   }
 }
 
-// function getSearchQueries() {
-//   return {
-//     type: GET_SEARCH_QUERIES,
-//     payload: {
-//       searchQueries: {
-//         where: ["anywhere", "North America", "South America", "Europe", "Asia/Pacific", "Africa", "Middle East"],
-//         when: ["anytime"],
-//         budget: ["any"],
-//         duration: ["any"]
-//       }
-//     }
-//   }
-// }
+function setDuration(duration) {
+  return {
+    type: SET_DURATION,
+    payload: {
+      duration
+    }
+  }
+}
+
+function setBudget(budget) {
+  return {
+    type: SET_BUDGET,
+    payload: {
+      budget
+    }
+  }
+}
+
+function setDates(dates) {
+  return {
+    type: SET_DATES,
+    payload: {
+      dates
+    }
+  }
+}
+
+function setLocation(location) {
+  return {
+    type: SET_LOCATION,
+    payload: {
+      location
+    }
+  }
+}
 
 export default {
   test,
-  // getSearchQueries
+  setDates,
+  setLocation,
+  setDuration,
+  setBudget
 }
