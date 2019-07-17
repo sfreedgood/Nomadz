@@ -22,6 +22,13 @@ const initialState = {
   }
 }
 
+const initialSearchParams = {
+  location: null,
+  dates: null,
+  duration: null,
+  budget: null
+}
+
 const setup = (state = initialState, action) => {
   switch(action.type) {
     case "TEST":
@@ -37,7 +44,7 @@ const setup = (state = initialState, action) => {
   }
 }
 
-const searchParams = (state = null, action) => {
+const searchParams = (state = initialSearchParams, action) => {
   switch(action.type) {
     case "SET_LOCATION":
       const { location } = action.payload

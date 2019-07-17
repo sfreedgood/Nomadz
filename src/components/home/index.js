@@ -6,7 +6,9 @@ import { connect } from "react-redux"
 
 function mapStateToProps (state) {
   const { searchQueries } = state.setup
-  return { searchQueries }
+  console.log(state)
+  const { location, budget, duration, dates } = state.searchParams
+  return { searchQueries, location, budget, duration, dates }
 };
 
 // function mapDispatchToProps (dispatch) { //list of action-creators to be dispatched
@@ -30,9 +32,21 @@ const Home = (props) => {
     )
   })
 
+  const handleSubmit = () => {
+    let searchData = {
+      duration: props.duration,
+      location: props.location,
+      budget: props.budget,
+      dates: props.dates
+    }
+    console.log(searchData)
+  }
+
   return(
     <div className="home-container">
+      <h1 className="home-header">Let's start something special</h1>
       {allQueries}
+      <button type="submit" onClick={handleSubmit} >LET'S GO</button>
     </div>
   )
 }

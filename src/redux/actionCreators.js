@@ -2,7 +2,7 @@
 const TEST = "TEST"
 const SET_DURATION = "SET_DURATION"
 const SET_BUDGET = "SET_BUDGET"
-const SET_DATES = "SET_DATES "
+const SET_DATES = "SET_DATES"
 const SET_LOCATION = "SET_LOCATION"
 
 // Action Creators
