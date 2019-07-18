@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Home from './components/home';
-
+import DestinationList from './components/results';
 
 //Redux
 import { connect } from "react-redux"
@@ -40,6 +40,7 @@ function App({test}) {
         </a>
       </header>
       <Home />
+      <DestinationList />
     </div>
   );
 }

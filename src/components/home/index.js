@@ -3,6 +3,7 @@ import Query from "./query"
 
 //Redux
 import { connect } from "react-redux"
+import CountrySelector from "./countrySelect";
 
 function mapStateToProps (state) {
   const { searchQueries } = state.setup
@@ -45,6 +46,7 @@ const Home = (props) => {
   return(
     <div className="home-container">
       <h1 className="home-header">Let's start something special</h1>
+      <CountrySelector />
       {allQueries}
       <button type="submit" onClick={handleSubmit} >LET'S GO</button>
     </div>

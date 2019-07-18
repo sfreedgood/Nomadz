@@ -14,11 +14,11 @@ function generatePrices (stepRange, upperLimit) {
 
 const initialState = {
   test: false,
-  searchQueries: {
-    where: ["Anywhere", "North America", "South America", "Europe", "Asia/Pacific", "Africa", "Middle East"],
-    when: ["Anytime", ...months],
-    budget: ["Any", ...prices],
-    duration: ["Any"]
+  searchQueries: { //Skyscanner widget requires that these must be single quotes in order to work, for more information refer to the documentation linked in the relevant widget component
+    where: ['Anywhere', 'North America', 'South America', 'Europe', 'Asia/Pacific', 'Africa', 'Middle East'],
+    when: ['Anytime', ...months],
+    budget: ['Any', ...prices],
+    duration: ['Any']
   }
 }
 
