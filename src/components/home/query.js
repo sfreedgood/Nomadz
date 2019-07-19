@@ -19,6 +19,7 @@ function mapDispatchToProps (dispatch) { //list of action-creators to be dispatc
 
 //Component
 function Query (props) {
+  console.log(props.query)
   let queryTitle = props.query.charAt(0).toUpperCase() + props.query.slice(1) + "?"//Capitalizes only the first character, then concatenates rest of word (omitting first character)
   let queryOptions = props.queryData.map( (item, index) => <option key={index} value={item}>{item}</option>)
   

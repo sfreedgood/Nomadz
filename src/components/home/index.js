@@ -14,7 +14,7 @@ function mapStateToProps (state) {
 
 // function mapDispatchToProps (dispatch) { //list of action-creators to be dispatched
 //   return {
-//     test: (testVal) => dispatch({type: "SEARCH_QUERIES", payload: {searchQueries: "Where"}}), 
+//     setDestinationOptions: (countryList) => dispatch({type: "SET_DESTINATION_OPTIONS", payload: {countryList}}), 
 //   }
 // }
 

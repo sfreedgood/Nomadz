@@ -1,4 +1,6 @@
 import { combineReducers} from "redux"
+import countryList from 'react-select-country-list'
+
 const moment = require("moment")
 
 const months = moment.months()
@@ -15,7 +17,7 @@ function generatePrices (stepRange, upperLimit) {
 const initialState = {
   test: false,
   searchQueries: { //Skyscanner widget requires that these must be single quotes in order to work, for more information refer to the documentation linked in the relevant widget component
-    where: ['Anywhere', 'North America', 'South America', 'Europe', 'Asia/Pacific', 'Africa', 'Middle East'],
+    where: countryList,
     when: ['Anytime', ...months],
     budget: ['Any', ...prices],
     duration: ['Any']
@@ -35,6 +37,11 @@ const setup = (state = initialState, action) => {
       const { test } = action.payload
       return {
         ...state, test: test
+      }
+    case "SET_DESTINATION_OPTIONS":
+      const { destinationOptions } = action.payload
+      return {
+        ...state, where: destinationOptions
       }
     // case "":
     //   const { } = action.payload

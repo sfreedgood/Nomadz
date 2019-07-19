@@ -4,6 +4,7 @@ const SET_DURATION = "SET_DURATION"
 const SET_BUDGET = "SET_BUDGET"
 const SET_DATES = "SET_DATES"
 const SET_LOCATION = "SET_LOCATION"
+const SET_DESTINATION_OPTIONS = "SET_DESTINATION_OPTIONS"
 
 // Action Creators
 function test(val) {
@@ -11,6 +12,15 @@ function test(val) {
     type: TEST,
     payload: {
       test: val
+    }
+  }
+}
+
+function setDestinationOptions(options) {
+  return {
+    type: SET_DESTINATION_OPTIONS,
+    payload: {
+      destinationOptions: options
     }
   }
 }
@@ -56,5 +66,6 @@ export default {
   setDates,
   setLocation,
   setDuration,
-  setBudget
+  setBudget,
+  setDestinationOptions
 }
