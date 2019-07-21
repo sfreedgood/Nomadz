@@ -1,8 +1,8 @@
 import { combineReducers} from "redux"
-import countryList from 'react-select-country-list'
+import countries from 'react-select-country-list'
 
+const countryList = countries().data
 const moment = require("moment")
-
 const months = moment.months()
 const prices = generatePrices(500, 10000) //first parameter sets the price range, second parameter sets maximum price of the list
 
@@ -38,11 +38,11 @@ const setup = (state = initialState, action) => {
       return {
         ...state, test: test
       }
-    case "SET_DESTINATION_OPTIONS":
-      const { destinationOptions } = action.payload
-      return {
-        ...state, where: destinationOptions
-      }
+    // case "SET_DESTINATION_OPTIONS":
+    //   const { destinationOptions } = action.payload
+    //   return {
+    //     ...state, where: destinationOptions
+    //   }
     // case "":
     //   const { } = action.payload
     //   return { }

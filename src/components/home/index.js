@@ -3,12 +3,12 @@ import Query from "./query"
 
 //Redux
 import { connect } from "react-redux"
-import CountrySelector from "./countrySelect";
 
 function mapStateToProps (state) {
   const { searchQueries } = state.setup
-  console.log(state)
   const { location, budget, duration, dates } = state.searchParams
+  console.log(location)
+
   return { searchQueries, location, budget, duration, dates }
 };
 
@@ -21,6 +21,7 @@ function mapStateToProps (state) {
 const Home = (props) => {
   const queryOptions = Object.keys(props.searchQueries)
   const queryData = props.searchQueries
+  console.log(queryData)
 
   let allQueries = queryOptions.map( (queryOption, index) => {
     return (
@@ -46,7 +47,6 @@ const Home = (props) => {
   return(
     <div className="home-container">
       <h1 className="home-header">Let's start something special</h1>
-      <CountrySelector />
       {allQueries}
       <button type="submit" onClick={handleSubmit} >LET'S GO</button>
     </div>

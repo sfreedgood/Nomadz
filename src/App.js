@@ -6,24 +6,24 @@ import DestinationList from './components/results';
 //Redux
 import { connect } from "react-redux"
 
-function mapStateToProps (state) {
-  const { test } = state
-  return { test }
-};
+// function mapStateToProps (state) {
+//   const { test } = state
+//   return { test }
+// };
 
-function mapDispatchToProps (dispatch) { //list of action-creators to be dispatched
-  return {
-    test: (testVal) => dispatch({type: "TEST", payload: {test: testVal}}), 
-  }
-}
+// function mapDispatchToProps (dispatch) { //list of action-creators to be dispatched
+//   return {
+//     test: (testVal) => dispatch({type: "TEST", payload: {test: testVal}}), 
+//   }
+// }
 
-function App({test}) {
-  const testFunc = val => {
-    console.log("Clicked")
-    test(val)
-  }
+function App() {
+//   const testFunc = val => {
+//     console.log("Clicked")
+//     test(val)
+//   }
   return (
-    <div onClick={testFunc} className="App">
+    <div className="App">
       <Home />
       <DestinationList />
     </div>
@@ -31,6 +31,6 @@ function App({test}) {
 }
 
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+  // mapStateToProps,
+  // mapDispatchToProps
 )(App) //component goes here

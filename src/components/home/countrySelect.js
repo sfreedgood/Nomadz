@@ -23,7 +23,7 @@ class CountrySelector extends Component {
       <Select
         options={this.state.options}
         value={this.state.value}
-        onChange={this.changeHandler}
+        onChange={this.props.setSearchParam}
       />
     )
   }

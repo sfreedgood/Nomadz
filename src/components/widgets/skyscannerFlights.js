@@ -6,15 +6,18 @@ import React from "react"
 import { connect } from "react-redux"
 
 function mapStateToProps (state) {
-  const { searchQueries } = state.setup
-  console.log(state)
+  // const { searchQueries } = state.setup
   const { location, budget, duration, dates } = state.searchParams
-  return { searchQueries, location, budget, duration, dates }
+  return { location, budget, duration, dates }
 };
 
-function FlightSearchWidget () {
-  let departureDate = null
-  let returnDate = null
+function FlightSearchWidget (props) {
+  // let departureDate = null
+  // let returnDate = null
+  // let location = 'New York'
+  //  ? 'placeholder' : props.location.replace(/"/g, "'")
+    // console.log(location)
+
   return (
     <div className="flight-search-widget">
       <div data-skyscanner-widget="FlightSearchWidget" //required
@@ -22,13 +25,15 @@ function FlightSearchWidget () {
            data-locale="en-GB"
            market="US"
            currency="USD"
-           data-destination-name={`"${'Edinburgh'}"`} //this string formatting is required in order to function
-           data-flight-outbound-date={departureDate}
-           data-flight-inbound-date={returnDate}
+          //  data-destination-name={`"${location}"`} //this string formatting is required in order to function
+          //  data-flight-outbound-date={departureDate}
+          //  data-flight-inbound-date={returnDate}
            >
       </div>
     </div>
   )
 }
 
-export default FlightSearchWidget
+export default connect(
+  mapStateToProps
+)(FlightSearchWidget)

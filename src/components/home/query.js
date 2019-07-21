@@ -1,4 +1,6 @@
 import React from "react"
+import Select from 'react-select'
+import CountrySelector from "./countrySelect";
 
 //Redux
 import { connect } from "react-redux"
@@ -17,16 +19,19 @@ function mapDispatchToProps (dispatch) { //list of action-creators to be dispatc
   }
 }
 
+
+
 //Component
 function Query (props) {
   console.log(props.query)
   let queryTitle = props.query.charAt(0).toUpperCase() + props.query.slice(1) + "?"//Capitalizes only the first character, then concatenates rest of word (omitting first character)
-  let queryOptions = props.queryData.map( (item, index) => <option key={index} value={item}>{item}</option>)
+  let queryOptions = props.queryData.map( (item, index) => {
+    return {value: item, label: item}
+  })
   
   const setSearchParam = (event) => {
-    event.preventDefault()
-    console.log(event.target)
-    let selection = event.target.value
+    // event.preventDefault()
+    let selection = event.label || event.target.value //country list event is an object, all other event are standard targets
     console.log(selection)
     switch (props.query) {
       case "when":
@@ -50,9 +55,16 @@ function Query (props) {
     <div className="query">
       <h1>{queryTitle}</h1>
       <form className="search-field">
-        <select onChange={setSearchParam}>
-          {queryOptions}
-        </select>
+      {
+        props.query === "where" ?
+          <CountrySelector setSearchParam={setSearchParam} />
+          :
+          <Select 
+            onChange={setSearchParam} 
+            options={queryOptions}
+            value={queryOptions}
+          />
+      }        
       </form>
     </div>
   )
