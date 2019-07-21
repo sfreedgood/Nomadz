@@ -31,7 +31,7 @@ function Query (props) {
   
   const setSearchParam = (event) => {
     // event.preventDefault()
-    let selection = event.label || event.target.value //country list event is an object, all other event are standard targets
+    let selection = event || event.target.value //country list event is an object, all other event are standard targets
     console.log(selection)
     switch (props.query) {
       case "when":

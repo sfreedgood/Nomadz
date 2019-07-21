@@ -1,8 +1,18 @@
 import React from "react"
 import Destination from "./destination";
 import FlightSearchWidget from "../widgets/skyscannerFlights";
+import Budget from "../details/budget";
 
-function Results() {
+//Redux
+import { connect } from "react-redux"
+
+function mapStateToProps (state) {
+  // const { searchQueries } = state.setup
+  const { location, budget, duration, dates } = state.searchParams
+  return { location, budget, duration, dates }
+};
+
+function Results(props) {
   let destinationResults = ['1', '2', '3', '4']
   let destinationList = destinationResults.map( (destination, index) => {
     return (
@@ -16,7 +26,13 @@ function Results() {
         {destinationList}
       </div>
       <FlightSearchWidget />
+      {
+        props.location &&
+        <Budget />
+      }
     </div>
   )
 }
-export default Results
+export default connect(
+  mapStateToProps
+)(Results)
