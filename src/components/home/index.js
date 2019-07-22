@@ -1,5 +1,6 @@
 import React from "react"
 import Query from "./query"
+import LocationSelectors from "./locationSelect"
 
 //Redux
 import { connect } from "react-redux"
@@ -48,6 +49,7 @@ const Home = (props) => {
   return(
     <div className="home-container">
       <h1 className="home-header">Let's start something special</h1>
+      <LocationSelectors />
       {allQueries}
       <button type="submit" onClick={handleSubmit} >LET'S GO</button>
     </div>

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Select from 'react-select'
 // import countryList from 'react-select-country-list' //built-in options for all countries
 import countryList from "../../redux/countryList" //custom made options for use with budget widget
-import topDestinations from "../../redux/top100Destinations"
 
 //redux
 import { connect } from "react-redux"
@@ -24,22 +23,6 @@ class CountrySelector extends Component {
       value: null,
     }
   }
-
-  // componentWillMount = () => {
-  //   console.log(this.props.country)
-  //   if (this.props.country) {
-  //     let cities = topDestinations.filter( item => {
-  //       // console.log(this.props.country.value)
-  //       // console.log(item)
-  //       if ( this.props.country.value === item.countryCode ){
-  //         return item
-  //       } //loops though top destination, if country matches selected country, returns destination
-  //     })
-  //     this.setState({ options: cities}) 
-  //   } else {
-  //     this.setState({ options: countryList})
-  //   }
-  // }
  
   changeHandler = value => {
     this.setState({ value })
