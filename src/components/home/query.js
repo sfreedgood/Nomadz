@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import Select from 'react-select'
-import CountrySelector from "./locationSelect";
+import CountrySelector from "./countrySelect";
+import CitySelector from "./citySelect"
 // import topDestinations from "../../redux/top100Destinations"
 
 //Redux
@@ -63,8 +64,10 @@ class Query extends Component {
   }
 
   loadCities = () => {
-    console.log('loadCities')
-    this.setState({ country: true }) 
+    
+    this.setState( prevState => ({
+      country: !prevState.country
+    }))
   }
 
   render () {
@@ -79,7 +82,7 @@ class Query extends Component {
         }
         {
           this.state.country &&
-            <CountrySelector type={this.props.query} country={this.props.country} setSearchParam={this.setSearchParam} />
+            <CitySelector type={this.props.query} country={this.props.country} setSearchParam={this.setSearchParam} />
         }
         {
           this.props.query !== "countries" && this.props.query !== "city" &&

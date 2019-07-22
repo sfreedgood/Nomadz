@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Select from 'react-select'
 // import countryList from 'react-select-country-list' //built-in options for all countries
-import countryList from "../../redux/countryList" //custom made options for use with budget widget
+// import countryList from "../../redux/countryList" //custom made options for use with budget widget
 import topDestinations from "../../redux/top100Destinations"
 
 //redux
@@ -12,12 +12,12 @@ function mapStateToProps (state) {
   return { country, city }
 }
 
-class CountrySelector extends Component {
+class CitySelector extends Component {
   constructor(props) {
     super(props)
  
     // this.options = countryList().getData() // for use with the full country list. Note: this may break the budgeting functions
-    this.options = this.filterOptions()
+    this.options = this.getCities()
  
     this.state = {
       options: this.options,
@@ -25,16 +25,19 @@ class CountrySelector extends Component {
     }
   }
 
-  filterOptions = () => {
-    // console.log(this.props)
+  getCities = () => {
+    console.log(this.props.country)
     if (this.props.country) {
       let cities = topDestinations.filter( item => {
-        return this.props.country.value === item.countryCode && item //loops though top destination, if country matches selected country, returns destination
+        // console.log(this.props.country.value)
+        // console.log(item)
+        if ( this.props.country.value === item.countryCode ){
+          return item
+        } //loops though top destination, if country matches selected country, returns destination
       })
-      // console.log(cities)
       return cities
     } else {
-      return countryList
+      return topDestinations
     }
   }
  
@@ -57,4 +60,4 @@ class CountrySelector extends Component {
 
 export default connect(
   mapStateToProps
-)(CountrySelector)
+)(CitySelector)
