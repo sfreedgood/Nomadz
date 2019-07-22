@@ -21,7 +21,7 @@ function generatePrices (stepRange, upperLimit) {
 const initialState = {
   test: false,
   searchQueries: { //Skyscanner widget requires that these must be single quotes in order to work, for more information refer to the documentation linked in the relevant widget component
-    where: countryList,
+    countries: countryList,
     when: ['Anytime', ...months],
     budget: ['Any', ...prices],
     duration: ['Any']
@@ -29,7 +29,8 @@ const initialState = {
 }
 
 const initialSearchParams = {
-  location: null,
+  country: null,
+  city: null,
   dates: null,
   duration: null,
   budget: null
@@ -42,14 +43,6 @@ const setup = (state = initialState, action) => {
       return {
         ...state, test: test
       }
-    // case "SET_DESTINATION_OPTIONS":
-    //   const { destinationOptions } = action.payload
-    //   return {
-    //     ...state, where: destinationOptions
-    //   }
-    // case "":
-    //   const { } = action.payload
-    //   return { }
     default:
       return state
   }
@@ -57,11 +50,21 @@ const setup = (state = initialState, action) => {
 
 const searchParams = (state = initialSearchParams, action) => {
   switch(action.type) {
-    case "SET_LOCATION":
-      const { location } = action.payload
+    case "SET_COUNTRY":
+        const { country } = action.payload
+        return {
+          ...state, country: country
+    }
+    case "SET_CITY":
+      const { city } = action.payload
       return {
-        ...state, location: location
-      }
+        ...state, city: city
+    }
+    // case "SET_LOCATION":
+    //   const { location } = action.payload
+    //   return {
+    //     ...state, location: location
+    //   }
     case "SET_DATES":
       const { dates } = action.payload
       return {

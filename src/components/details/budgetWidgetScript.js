@@ -4,7 +4,9 @@ import Script from "react-load-script"
 
 
 class BudgetScript extends Component {
-
+  state = {
+    countryCode: this.props.countryCode
+  }
 
   handleScriptCreate() {
     this.setState({ scriptLoaded: false })
@@ -19,7 +21,6 @@ class BudgetScript extends Component {
   }
 
   render() {
-    console.log(this.props.countryCode)
     return (
       <Script
         url={`https://widget.budgetyourtrip.com/location-widget-js/${this.props.countryCode}`}

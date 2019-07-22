@@ -1,10 +1,10 @@
 // Action Types
-const TEST = "TEST"
+// const TEST = "TEST"
 const SET_DURATION = "SET_DURATION"
 const SET_BUDGET = "SET_BUDGET"
 const SET_DATES = "SET_DATES"
-const SET_LOCATION = "SET_LOCATION"
-// const SET_DESTINATION_OPTIONS = "SET_DESTINATION_OPTIONS"
+const SET_COUNTRY = "SET_COUNTRY"
+const SET_CITY = "SET_CITY"
 
 // Action Creators
 // function test(val) {
@@ -12,15 +12,6 @@ const SET_LOCATION = "SET_LOCATION"
 //     type: TEST,
 //     payload: {
 //       test: val
-//     }
-//   }
-// }
-
-// function setDestinationOptions(options) {
-//   return {
-//     type: SET_DESTINATION_OPTIONS,
-//     payload: {
-//       destinationOptions: options
 //     }
 //   }
 // }
@@ -52,11 +43,20 @@ function setDates(dates) {
   }
 }
 
-function setLocation(location) {
+function setCountry(country) {
   return {
-    type: SET_LOCATION,
+    type: SET_COUNTRY,
     payload: {
-      location
+      country
+    }
+  }
+}
+
+function setCity(city) {
+  return {
+    type: SET_CITY,
+    payload: {
+      city
     }
   }
 }
@@ -64,8 +64,8 @@ function setLocation(location) {
 export default {
   test,
   setDates,
-  setLocation,
+  setCity,
+  setCountry,
   setDuration,
   setBudget,
-  setDestinationOptions
 }

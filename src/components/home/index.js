@@ -6,10 +6,10 @@ import { connect } from "react-redux"
 
 function mapStateToProps (state) {
   const { searchQueries } = state.setup
-  const { location, budget, duration, dates } = state.searchParams
-  console.log(location)
+  const { country, city, budget, duration, dates } = state.searchParams
+  console.log(country)
 
-  return { searchQueries, location, budget, duration, dates }
+  return { searchQueries, country, city, budget, duration, dates }
 };
 
 // function mapDispatchToProps (dispatch) { //list of action-creators to be dispatched
@@ -37,7 +37,8 @@ const Home = (props) => {
   const handleSubmit = () => {
     let searchData = {
       duration: props.duration,
-      location: props.location,
+      country: props.country,
+      city: props.city,
       budget: props.budget,
       dates: props.dates
     }
