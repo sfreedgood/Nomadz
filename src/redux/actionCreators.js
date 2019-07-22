@@ -44,6 +44,7 @@ function setDates(dates) {
 }
 
 function setCountry(country) {
+  console.log(country)
   return {
     type: SET_COUNTRY,
     payload: {

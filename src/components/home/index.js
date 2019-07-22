@@ -7,7 +7,7 @@ import { connect } from "react-redux"
 function mapStateToProps (state) {
   const { searchQueries } = state.setup
   const { country, city, budget, duration, dates } = state.searchParams
-  console.log(country)
+  // console.log(country)
 
   return { searchQueries, country, city, budget, duration, dates }
 };
@@ -21,7 +21,7 @@ function mapStateToProps (state) {
 const Home = (props) => {
   const queryOptions = Object.keys(props.searchQueries)
   const queryData = props.searchQueries
-  console.log(queryData)
+  // console.log(queryData)
 
   let allQueries = queryOptions.map( (queryOption, index) => {
     return (

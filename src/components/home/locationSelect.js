@@ -26,11 +26,12 @@ class CountrySelector extends Component {
   }
 
   filterOptions = () => {
+    // console.log(this.props)
     if (this.props.country) {
       let cities = topDestinations.filter( item => {
         return this.props.country.value === item.countryCode && item //loops though top destination, if country matches selected country, returns destination
       })
-      console.log(cities)
+      // console.log(cities)
       return cities
     } else {
       return countryList
@@ -42,12 +43,13 @@ class CountrySelector extends Component {
   }
  
   render() {
-    console.log(this.state.options)
+    // console.log(this.state.options)
     return (
       <Select
         options={this.state.options}
         value={this.state.value}
         onChange={this.props.setSearchParam}
+        // onSelect={this.props.onSelect}
       />
     )
   }
