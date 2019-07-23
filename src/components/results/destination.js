@@ -1,12 +1,12 @@
-import React from "react"
+// import React from "react"
 
-function Destination (props) {
+// function Destination (props) {
 
-  return(
-    <div className="destination">
-      I'm destination {props.destination}
-    </div>
-  )
-}
+//   return(
+//     <div className="destination">
+//       I'm destination {props.destination}
+//     </div>
+//   )
+// }
 
-export default Destination
+// export default Destination
