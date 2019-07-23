@@ -37,14 +37,12 @@ class LocationSelectors extends Component {
   }
 
   getCities = (event) => {
-    console.log(event)
     if (event) {
       let cities = topDestinations.filter( item => {
         if ( event.value === item.countryCode ){
           return item
         } //loops though top destination, if country matches selected country, returns destination
       })
-      console.log(cities)
       this.setState(prevState => ({ cities }))
     } else {
       this.setState(prevState => ({ topDestinations }))
@@ -52,7 +50,6 @@ class LocationSelectors extends Component {
   }
 
   render() { 
-    console.log(this.state)
     return (
       <div className="location-selectors">
         <h1 className="query-header">Where?</h1>

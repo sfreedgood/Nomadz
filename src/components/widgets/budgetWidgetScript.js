@@ -21,9 +21,11 @@ class BudgetScript extends Component {
   }
 
   render() {
+    console.log("test")
     return (
       <Script
-        url={`https://widget.budgetyourtrip.com/location-widget-js/${this.props.countryCode}`}
+        attributes={{id: `${this.state.countryCode}`}}
+        url={`https://widget.budgetyourtrip.com/location-widget-js/${this.state.countryCode}`}
         onCreate={this.handleScriptCreate.bind(this)}
         onError={this.handleScriptError.bind(this)}
         onLoad={this.handleScriptLoad.bind(this)}

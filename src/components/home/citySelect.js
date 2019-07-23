@@ -44,8 +44,8 @@ class CitySelector extends Component {
   }
  
   render() {
-    console.log(this.props)
-    console.log(this.state.options)
+    // console.log(this.props)
+    // console.log(this.state.options)
     return (
       <Select
         options={this.props.cities}

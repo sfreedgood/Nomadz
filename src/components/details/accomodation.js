@@ -1,21 +1,21 @@
-import React from "react"
+// import React from "react"
 
-//redux
-import connect from "react-redux"
+// //redux
+// import connect from "react-redux"
 
-function mapStateToProps () {
+// function mapStateToProps () {
 
-}
+// }
 
-function Accomodation () {
+// function Accomodation () {
 
-  return (
-    <div className="filter-tile">
+//   return (
+//     <div className="filter-tile">
       
-    </div>
-  )
-}
+//     </div>
+//   )
+// }
 
-export default connect(
-  mapStateToProps
-)(Accomodation)
+// export default connect(
+//   mapStateToProps
+// )(Accomodation)
