@@ -35,23 +35,14 @@ const Home = (props) => {
     )
   })
 
-  const handleSubmit = () => {
-    let searchData = {
-      duration: props.duration,
-      country: props.country,
-      city: props.city,
-      budget: props.budget,
-      dates: props.dates
-    }
-    console.log(searchData)
-  }
+  console.log(props)
 
   return(
     <div className="home-container">
       <h1 className="home-header">Let's start something special</h1>
       <LocationSelectors />
       {allQueries}
-      <button type="submit" onClick={handleSubmit} >LET'S GO</button>
+      <button type="submit" onClick={props.handleSubmit} >LET'S GO</button>
     </div>
   )
 }

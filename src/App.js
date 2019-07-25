@@ -1,36 +1,35 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
+import { Route, Redirect } from 'react-router-dom'
+import Header from "./components/header"
 import Home from './components/home';
-import DestinationList from './components/results';
+import Results from './components/results';
 
-//Redux
-import { connect } from "react-redux"
+class App extends Component {
+  state = {
+    submitted: false
+  }
 
-// function mapStateToProps (state) {
-//   const { test } = state
-//   return { test }
-// };
+  handleSubmit = () => {
+    this.setState({submitted: true})
+  }
 
-// function mapDispatchToProps (dispatch) { //list of action-creators to be dispatched
-//   return {
-//     test: (testVal) => dispatch({type: "TEST", payload: {test: testVal}}), 
-//   }
-// }
+  render () {
+    return (
+      <div className="App">
+        <Header />
+        {/* <Link to="/">Home</Link> */}
+        {/* <Link to="/results">Results</Link> */}
+        {
+          this.state.submitted === true &&
+          <Redirect to="/results" />
+        }
 
-function App() {
-//   const testFunc = val => {
-//     console.log("Clicked")
-//     test(val)
-//   }
-  return (
-    <div className="App">
-      <Home />
-      <DestinationList />
-    </div>
-  );
+        <Route exact path="/" render={() => <Home handleSubmit={this.handleSubmit}/>} />
+        <Route path="/results" render={() => <Results />} />
+      </div>
+    );
+  }
 }
 
-export default connect(
-  // mapStateToProps,
-  // mapDispatchToProps
-)(App) //component goes here
+export default App

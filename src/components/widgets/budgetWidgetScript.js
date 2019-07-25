@@ -1,8 +1,6 @@
 import React, { Component } from "react"
 import Script from "react-load-script"
 
-
-
 class BudgetScript extends Component {
   state = {
     countryCode: this.props.countryCode
@@ -29,7 +27,7 @@ class BudgetScript extends Component {
         onCreate={this.handleScriptCreate.bind(this)}
         onError={this.handleScriptError.bind(this)}
         onLoad={this.handleScriptLoad.bind(this)}
-    />
+      />
     )
   }
 }

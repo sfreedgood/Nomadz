@@ -1,5 +1,4 @@
 import React from "react"
-import Destination from "./destination";
 import FlightSearchWidget from "../widgets/skyscannerFlights";
 import BudgetWidget from "../widgets/budgetWidget";
 import { withRouter, Link, Route } from "react-router-dom"
@@ -24,26 +23,29 @@ function Results(props) {
   if (props.country) { element = document.getElementById(`${props.country.value}`) }
   console.log(element)
 
-  console.log(props.country)
+  console.log(props.city)
 
   return(
-    <div className="results">
-      <div className="result">
-        <Link to="/flightSearchWidget">Flights to {`${props.city}`}</Link>
+      <div className="results">
+        {
+          props.city &&
+          <div id="flights" className="result">
+            <Link to="/flightSearchWidget">Flights to {`${props.city.label}`}</Link>
+            <Route path="/flightSearchWidget"
+              component={() => <FlightSearchWidget city={props.city}/>}
+            />
+          </div>
+        }
+        {
+          props.country &&
+          <div className="result">
+            <Link to="/budgetWidget">Budget for {`${props.country.label}`}</Link>
+            <Route path="/budgetWidget"
+              component={() => <BudgetWidget country={props.country} city={props.city} />}
+            />
+          </div>
+        }
       </div>
-      <div className="result">
-        <Link to="/budgetWidget">Budget for {`${props.country}`}</Link>
-      </div>
-
-
-      <Route path="/flightSearchWidget"
-             component={() => <FlightSearchWidget city={props.city}/>}
-      />      
-      <Route path="/flightSearchWidget"
-             component={() => <BudgetWidget country={props.country} city={props.city} />}
-      />
-      
-    </div>
   )
 }
 export default withRouter(connect(

@@ -1,8 +1,6 @@
 import React, { Component } from "react"
 import Script from "react-load-script"
 
-
-
 class FlightScript extends Component {
   state = {
     city: this.props.city
@@ -21,7 +19,6 @@ class FlightScript extends Component {
   }
 
   render() {
-    console.log("test")
     return (
       <Script
         url={"https://widgets.skyscanner.net/widget-server/js/loader.js"}

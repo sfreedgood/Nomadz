@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Component } from "react"
 // Documentation for widget:
 // https://partners.skyscanner.net/affiliates/widgets-documentation/flight-search-widget
 
@@ -8,33 +8,29 @@ import FlightScript from "./skyscannerFlightsScript";
 
 function mapStateToProps (state) {
   // const { searchQueries } = state.setup
-  const { country, city, budget, duration, dates } = state.searchParams
-  return { country, city, budget, duration, dates }
+  const { city } = state.searchParams
+  return { city }
 };
 
 function FlightSearchWidget (props) {
-  // let departureDate = null
-  // let returnDate = null
-  console.log(props.city)
-  let location = props.city && props.city.city
-  //  ? 'placeholder' : props.location.replace(/"/g, "'")
-    // console.log(location)
 
-  return (
-    <div className="flight-search-widget">
-      <FlightScript />
-      <div data-skyscanner-widget="FlightSearchWidget" //required
-           data-associate-id="ABC_DEF_12345_56789" //required, need to get
-           data-locale="en-GB"
-           market="US"
-           currency="USD"
-           data-destination-name={`"${location}"`} //this string formatting is required in order to function
-          //  data-flight-outbound-date={departureDate}
-          //  data-flight-inbound-date={returnDate}
-           >
+  // render () {
+    return (
+      <div className="flight-search-widget">
+        <FlightScript />
+        <div data-skyscanner-widget="FlightSearchWidget" //required
+            data-associate-id="ABC_DEF_12345_56789" //required, need to get
+            data-locale="en-GB"
+            market="US"
+            currency="USD"
+            data-destination-name={`"${props.city.city}"`} //this string formatting is required in order to function
+            //  data-flight-outbound-date={departureDate}
+            //  data-flight-inbound-date={returnDate}
+            >
+        </div>
       </div>
-    </div>
-  )
+    )
+  // }
 }
 
 export default connect(
