@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Route, Redirect } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
 import Header from "./components/header"
 import Home from './components/home';
 import Results from './components/results';
@@ -18,8 +18,6 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        {/* <Link to="/">Home</Link> */}
-        {/* <Link to="/results">Results</Link> */}
         {
           this.state.submitted === true &&
           <Redirect to="/results" />
@@ -27,6 +25,7 @@ class App extends Component {
 
         <Route exact path="/" render={() => <Home handleSubmit={this.handleSubmit}/>} />
         <Route path="/results" render={() => <Results />} />
+        
       </div>
     );
   }

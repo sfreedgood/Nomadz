@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 // Documentation for widget:
 // https://partners.skyscanner.net/affiliates/widgets-documentation/flight-search-widget
 
@@ -13,7 +13,7 @@ function mapStateToProps (state) {
 };
 
 function FlightSearchWidget (props) {
-
+  console.log("I'm the flight widget")
   // render () {
     return (
       <div className="flight-search-widget">

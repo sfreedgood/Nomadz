@@ -1,7 +1,7 @@
 import React from "react"
 import FlightSearchWidget from "../widgets/skyscannerFlights";
 import BudgetWidget from "../widgets/budgetWidget";
-import { withRouter, Link, Route } from "react-router-dom"
+import { BrowserRouter as Router, withRouter, Link, Route } from "react-router-dom"
 
 //Redux
 import { connect } from "react-redux"
@@ -19,32 +19,42 @@ function Results(props) {
   //     <Destination key={index} destination={destination} />
   //   )
   // })
-  let element
-  if (props.country) { element = document.getElementById(`${props.country.value}`) }
-  console.log(element)
+  // let element
+  // if (props.country) { 
+  //   element = document.getElementById(`${props.country.value}`) 
+  //   console.log(element)
 
-  console.log(props.city)
+  // }
 
   return(
       <div className="results">
+        <Router>
         {
-          props.city &&
-          <div id="flights" className="result">
-            <Link to="/flightSearchWidget">Flights to {`${props.city.label}`}</Link>
-            <Route path="/flightSearchWidget"
-              component={() => <FlightSearchWidget city={props.city}/>}
-            />
-          </div>
+          this.props.city
+            ?
+            <Link id="flights" className="result" to="/flightSearchWidget">
+                Flights to {`${props.city.label}`}
+            </Link>
+            :
+            <div className="no-content-error">Please Enter More Information</div>
         }
         {
-          props.country &&
-          <div className="result">
-            <Link to="/budgetWidget">Budget for {`${props.country.label}`}</Link>
-            <Route path="/budgetWidget"
-              component={() => <BudgetWidget country={props.country} city={props.city} />}
-            />
-          </div>
+          this.props.country
+            ?
+            <Link id="budget" className="result" to="/budgetWidget">
+              Budget for {`${props.country.label}`}
+            </Link>
+            :
+            <div className="no-content-error">Please Enter More Information</div>
         }
+
+        <Route path="/flightSearchWidget"
+          render={() => <FlightSearchWidget city={props.city}/>}
+        />
+        <Route path="/budgetWidget"
+          render={() => <BudgetWidget country={props.country} city={props.city} />}
+        />
+        </Router>
       </div>
   )
 }
