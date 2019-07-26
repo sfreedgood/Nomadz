@@ -44,14 +44,14 @@ class CitySelector extends Component {
   }
  
   render() {
-    // console.log(this.props)
-    // console.log(this.state.options)
+    console.log(this.props)
+    console.log(this.state.value)
     return (
       <Select
         options={this.props.cities}
         value={this.state.value}
-        onChange={this.props.setSearchParam}
-        // onSelect={this.props.onSelect}
+        onChange={(this.props.setSearchParam, 'select-option')}
+        placeholder="city"
       />
     )
   }

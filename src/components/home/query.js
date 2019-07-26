@@ -30,6 +30,9 @@ class Query extends Component {
     console.log(event.value)
     let selection = event.value //country list event is an object, all other event are standard targets
     console.log(this.props.query)
+    this.setState({
+      value: selection
+    })
 
     switch (this.props.query) {
       case "when":
@@ -52,9 +55,10 @@ class Query extends Component {
         <h1>{this.state.queryTitle}</h1>
         <form className="search-field">
         <Select 
-          onChange={this.setSearchParam} 
+          onChange={(this.setSearchParam, 'select-option')} 
           options={this.state.queryOptions}
-          value={this.state.queryOptions}
+          value={this.state.value}
+          defaultValue={this.state.queryOptions[0]}
         />
         
         </form>

@@ -30,7 +30,7 @@ function Results(props) {
       <div className="results">
         <Router>
         {
-          this.props.city
+          props.city
             ?
             <Link id="flights" className="result" to="/flightSearchWidget">
                 Flights to {`${props.city.label}`}
@@ -39,7 +39,7 @@ function Results(props) {
             <div className="no-content-error">Please Enter More Information</div>
         }
         {
-          this.props.country
+          props.country
             ?
             <Link id="budget" className="result" to="/budgetWidget">
               Budget for {`${props.country.label}`}

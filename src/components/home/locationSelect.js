@@ -25,7 +25,7 @@ class LocationSelectors extends Component {
    }
 
   setSearchParam = (event) => {
-    // console.log(event)
+    console.log(event)
     let selection = event //country list event is an object, all other event are standard targets
     if (event.city) {
       this.props.setCity(selection)
@@ -53,16 +53,16 @@ class LocationSelectors extends Component {
     return (
       <div id="location-selectors" className="query">
         <h1 className="query-header">Where?</h1>
-        <div className="location-sub-squery">
+        {/* <div className="location-sub-squery"> */}
           {/* <h2 className="sub-query-header">Country</h2> */}
-          <CountrySelector type={this.props.query} setSearchParam={this.setSearchParam} />
-        </div>
+          <CountrySelector setSearchParam={this.setSearchParam} />
+        {/* </div> */}
         {
           this.state.country &&
-            <div className="location-sub-squery">
-              <h2 className="sub-query-header">City</h2>
+            // <div className="location-sub-squery">
+              // {/* <h2 className="sub-query-header">City</h2> */}
               <CitySelector cities={this.state.cities} type={this.props.query} country={this.state.country} setSearchParam={this.setSearchParam} />
-            </div>
+            // </div>
         }
       </div>
     );
