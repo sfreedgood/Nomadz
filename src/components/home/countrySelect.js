@@ -35,7 +35,7 @@ class CountrySelector extends Component {
         options={this.state.options}
         value={this.state.value}
         onChange={this.props.setSearchParam}
-        // onSelect={this.props.onSelect}
+        placeholder="Country"
       />
     )
   }

@@ -1,4 +1,5 @@
 import React from "react"
+import "./home.css"
 import Query from "./query"
 import LocationSelectors from "./locationSelect"
 
@@ -40,8 +41,10 @@ const Home = (props) => {
   return(
     <div className="home-container">
       <h1 className="home-header">Let's start something special</h1>
-      <LocationSelectors />
-      {allQueries}
+      <div className="query-container">
+        <LocationSelectors />
+        {allQueries}
+      </div>
       <button type="submit" onClick={props.handleSubmit} >LET'S GO</button>
     </div>
   )

@@ -51,10 +51,10 @@ class LocationSelectors extends Component {
 
   render() { 
     return (
-      <div className="location-selectors">
+      <div id="location-selectors" className="query">
         <h1 className="query-header">Where?</h1>
         <div className="location-sub-squery">
-          <h2 className="sub-query-header">Country</h2>
+          {/* <h2 className="sub-query-header">Country</h2> */}
           <CountrySelector type={this.props.query} setSearchParam={this.setSearchParam} />
         </div>
         {
