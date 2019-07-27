@@ -2,6 +2,8 @@ import React, { Component } from "react"
 import CountrySelector from "./countrySelect";
 import CitySelector from "./citySelect"
 import topDestinations from "../../redux/top100Destinations"
+import "./home.css"
+
 
 
 //Redux
@@ -28,9 +30,11 @@ class LocationSelectors extends Component {
     console.log(event)
     let selection = event //country list event is an object, all other event are standard targets
     if (event.city) {
+      this.setState({ city: selection })
       this.props.setCity(selection)
+      this.props.setCountry(selection)
     } else {
-      this.setState({ country: true })
+      this.setState({ country: selection })
       this.props.setCountry(selection)
       this.getCities(event)
     }
@@ -57,16 +61,37 @@ class LocationSelectors extends Component {
         <h1 className="query-header">Where?</h1>
           <CountrySelector setSearchParam={this.setSearchParam} />
         {
-          !this.state.cities &&
-          <button onClick={this.getCities} >Show Me All Cities</button>
-        }
-        {
           this.state.cities &&
             // <div className="location-sub-squery">
               // {/* <h2 className="sub-query-header">City</h2> */}
               <CitySelector cities={this.state.cities} type={this.props.query} country={this.state.country} setSearchParam={this.setSearchParam} />
             // </div>
         }
+        
+        <div className="location-display">
+          {
+            this.state.city && // if there is a city, show the city name
+            <div className="current-city">
+              {this.state.city.label},
+            </div>
+          }
+          {
+            this.state.city && // if there is a city, show the city country
+            <div className="current-country">
+              {this.state.city.country}
+            </div>
+          }
+          {
+            this.state.country && !this.state.city && // if there is a country, but not a city, show the country
+            <div className="current-country">
+              {this.state.country.label}
+            </div>
+          }
+
+          <button id="city-selector" onClick={this.getCities} >Show Me All Cities</button>
+        
+        </div>
+        
       </div>
     );
   }

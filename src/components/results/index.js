@@ -13,18 +13,6 @@ function mapStateToProps (state) {
 };
 
 function Results(props) {
-  // let destinationResults = ['1', '2', '3', '4']
-  // let destinationList = destinationResults.map( (destination, index) => {
-  //   return (
-  //     <Destination key={index} destination={destination} />
-  //   )
-  // })
-  // let element
-  // if (props.country) { 
-  //   element = document.getElementById(`${props.country.value}`) 
-  //   console.log(element)
-
-  // }
 
   return(
       <div className="results">
@@ -36,7 +24,7 @@ function Results(props) {
                 Flights to {`${props.city.label}`}
             </Link>
             :
-            <div className="no-content-error">Please Enter More Information</div>
+            <div className="no-content-error">Please enter a City to see flights</div>
         }
         {
           props.country
@@ -47,7 +35,19 @@ function Results(props) {
             :
             <div className="no-content-error">Please Enter More Information</div>
         }
+        {
+          props.country
+          ?
+          <Link id="gov" className="result" to="/gov">
+            Governmental Info for {`${props.country.label}`}
+          </Link>
+          :
+          <div className="no-content-error">Please Enter More Information</div>
+        }
 
+        <Route path="/gov"
+          render={() => <FlightSearchWidget city={props.city}/>}
+        />
         <Route path="/flightSearchWidget"
           render={() => <FlightSearchWidget city={props.city}/>}
         />
