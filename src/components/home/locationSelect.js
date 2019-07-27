@@ -37,7 +37,8 @@ class LocationSelectors extends Component {
   }
 
   getCities = (event) => {
-    if (event) {
+    // console.log(event.label)
+    if (event.label) {
       let cities = topDestinations.filter( item => {
         if ( event.value === item.countryCode ){
           return item
@@ -45,20 +46,22 @@ class LocationSelectors extends Component {
       })
       this.setState(prevState => ({ cities }))
     } else {
-      this.setState(prevState => ({ topDestinations }))
+      this.setState(prevState => ({ cities: topDestinations }))
     }
   }
 
-  render() { 
+  render() {
+    console.log(this.state.cities)
     return (
       <div id="location-selectors" className="query">
         <h1 className="query-header">Where?</h1>
-        {/* <div className="location-sub-squery"> */}
-          {/* <h2 className="sub-query-header">Country</h2> */}
           <CountrySelector setSearchParam={this.setSearchParam} />
-        {/* </div> */}
         {
-          this.state.country &&
+          !this.state.cities &&
+          <button onClick={this.getCities} >Show Me All Cities</button>
+        }
+        {
+          this.state.cities &&
             // <div className="location-sub-squery">
               // {/* <h2 className="sub-query-header">City</h2> */}
               <CitySelector cities={this.state.cities} type={this.props.query} country={this.state.country} setSearchParam={this.setSearchParam} />
