@@ -17,7 +17,7 @@ function MultiVerticalWidget (props) {
   console.log("I'm the flight widget")
   // render () {
     return (
-      <div className="flight-search-widget detail">
+      <div id="skyscanner-widget" className="flight-search-widget detail" style={{display: "none"}}>
         <WidgetScript />
         <div data-skyscanner-widget="MultiVerticalWidget" //required
             data-associate-id="ABC_DEF_12345_56789" //required, need to get

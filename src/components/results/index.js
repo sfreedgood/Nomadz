@@ -29,9 +29,21 @@ class Results extends Component {
   handleClick = (event) => {
     event.persist()
     let target = event.currentTarget.id
+    this.toggleSkyscanner(target)
+    
     this.setState(prevState => ({
       type: target
     }))
+  }
+
+  toggleSkyscanner = (target_id) => {
+    let target = document.getElementById("skyscanner-widget")
+    console.log(target)
+    if ( target_id === "skyscanner" && target.style.display === "none") {
+      target.style.display = "block"
+    } else {
+      target.style.display = "none"
+    }
   }
 
   render () {
@@ -103,14 +115,13 @@ class Results extends Component {
             }
           </div>
           <div className="results-display">
+            <SkyscannerMultiVerticalWidget />
+
             {
               this.state.type === "gov" &&
               <GovInfo />
             }
-            {
-              this.state.type === "skyscanner" &&
-              <SkyscannerMultiVerticalWidget city={this.props.city} />
-            }
+                        
             {
               this.state.type === "budget" &&
               <Budget country={this.props.country} city={this.props.city} />
