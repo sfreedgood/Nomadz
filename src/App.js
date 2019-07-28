@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
+import { Route, Redirect } from 'react-router-dom'
 import Header from "./components/header"
 import Home from './components/home';
 import Results from './components/results';
