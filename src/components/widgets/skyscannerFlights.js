@@ -4,7 +4,7 @@ import React from "react"
 
 //Redux
 import { connect } from "react-redux"
-import FlightScript from "./skyscannerFlightsScript";
+import WidgetScript from "./skyscannerWidgetScript";
 
 function mapStateToProps (state) {
   // const { searchQueries } = state.setup
@@ -17,7 +17,7 @@ function FlightSearchWidget (props) {
   // render () {
     return (
       <div className="flight-search-widget">
-        <FlightScript />
+        <WidgetScript />
         <div data-skyscanner-widget="FlightSearchWidget" //required
             data-associate-id="ABC_DEF_12345_56789" //required, need to get
             data-locale="en-GB"

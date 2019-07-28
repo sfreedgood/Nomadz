@@ -4,7 +4,8 @@ import "../results.css"
 
 function CDCinfo (props) {
   let regex = / /gi
-  let countryName = props.country.label.toLowerCase().replace(regex, "-")
+  let country = props.country.country || props.country.label
+  let countryName = country.toLowerCase().replace(regex, "-")
   console.log(countryName)
 
   return (

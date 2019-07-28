@@ -1,9 +1,14 @@
 import React from "react"
 import FlightSearchWidget from "../widgets/skyscannerFlights";
 import HotelSearchWidget from "../widgets/hotelWidget";
+import SkyscannerMultiVerticalWidget from "../widgets/skyscannerMultiVerticalWidget";
+
 import BudgetWidget from "../widgets/budgetWidget";
+import Budget from "./budget/budget"
 import GovInfo from "./gov/index"
 import VisitACity from "./visitACity/visitACity"
+import TravelerTips from "./travelerTips/travelerTips";
+
 import "./results.css"
 import { BrowserRouter as Router, Switch, withRouter, Link, Route } from "react-router-dom"
 
@@ -35,13 +40,13 @@ function Results(props) {
           {
             props.city
               ?
-              <Link id="flights" className="nav-box result" to="/flightSearchWidget">
-                  Flights
+              <Link id="flights" className="nav-box result" to="/skyscannerWidget">
+                  Flights, Accommodation & Transportation
               </Link>
               :
               <div className="nav-box no-content-error">Please enter a City to see flights</div>
           }
-          {
+          {/* {
             props.city
               ?
               <Link id="hotel" className="nav-box result" to="/hotelSearchWidget">
@@ -49,11 +54,11 @@ function Results(props) {
               </Link>
               :
               <div className="nav-box no-content-error">Please enter a City to see flights</div>
-          }
+          } */}
           {
             props.country
               ?
-              <Link id="budget" className="nav-box result" to="/budgetWidget">
+              <Link id="budget" className="nav-box result" to="/budget">
                 Budgeting
               </Link>
               :
@@ -63,6 +68,11 @@ function Results(props) {
           {
             (props.country || props.city) &&
             <VisitACity country={props.country} city={props.city} />
+          }
+
+          {
+            (props.country || props.city) &&
+            <TravelerTips country={props.country} city={props.city} />
           }
 
           {
@@ -80,14 +90,14 @@ function Results(props) {
               <Route exact path="/gov"
                 component={() => <GovInfo /> }
               />
-              <Route exact path="/flightSearchWidget"
-                component={() => <FlightSearchWidget city={props.city}/>}
+              <Route exact path="/sckyscannerWidget"
+                component={() => <SkyscannerMultiVerticalWidget city={props.city}/>}
               />
-              <Route exact path="/hotelSearchWidget"
-                component={() => <HotelSearchWidget city={props.city}/>}
-              />
-              <Route exact path="/budgetWidget"
-                component={() => <BudgetWidget country={props.country} city={props.city} />}
+              {/* <Route exact path="/hotelSearchWidget"
+                component={() => <SkyscannerMultiVerticalWidget city={props.city}/>}
+              /> */}
+              <Route exact path="/budget"
+                component={() => <Budget country={props.country} city={props.city} />}
               />
             </Switch>
           </Router>

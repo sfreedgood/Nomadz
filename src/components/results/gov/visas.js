@@ -3,7 +3,8 @@ import "../results.css"
 
 function VisaInfo (props) {
   let regex = / /gi
-  let countryName = props.country.label.replace(regex, "")
+  let country = props.country.country || props.country.label
+  let countryName = country.replace(regex, "")
   console.log(countryName)  
 
   return (

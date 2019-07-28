@@ -14,24 +14,26 @@ class Budget extends Component {
   componentWillMount = () => {
     console.log("mounting")
     console.log(this.props)
+    let country = this.props.country.country || this.props.country.label
     this.setState({countryCode: this.props.country.value})
     let regex = / /gi
-    this.setState({countryName: this.props.country.label.toLowerCase().replace(regex, "-")})
+    this.setState({countryName: country.toLowerCase().replace(regex, "-")})
   }
 
   componentWillReceiveProps = (props) => {
     console.log("receiving props")
+    let country = this.props.country.country || this.props.country.label
       this.setState({countryCode: props.country.value})
       let regex = / /gi
-      this.setState({countryName: props.country.label.toLowerCase().replace(regex, "-")})
+      this.setState({countryName: country.toLowerCase().replace(regex, "-")})
   }
 
   render () {
     return (
-      <div className="budget-widget">
-        <BudgetScript countryCode={this.state.countryCode} />
+      <div className="nav-box budget-widget">
+        {/* <BudgetScript countryCode={this.state.countryCode} /> */}
         <a href={`https://www.budgetyourtrip.com/${this.state.countryName}`} target="_blank" className="budgetyourtrip-logo-pushdown" rel="noopener noreferrer">
-          <h2 className="budget-info">{`${this.props.country.label} Budget Information`}</h2>
+          {`${this.props.country.country || this.props.country.label} Budget Information`}
         </a>
       </div>
     )

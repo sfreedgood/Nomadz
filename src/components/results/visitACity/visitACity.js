@@ -20,7 +20,7 @@ function VisitACity (props) {
         target="_blank"
         rel="noopener noreferrer"
       >
-        Things To Do
+        Things To Do & Guides
       </a>
     </div>
   )
