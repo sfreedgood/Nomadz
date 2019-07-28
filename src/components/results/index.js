@@ -1,16 +1,11 @@
 import React, { Component } from "react"
-// import FlightSearchWidget from "../widgets/skyscannerFlights";
-// import HotelSearchWidget from "../widgets/hotelWidget";
 import SkyscannerMultiVerticalWidget from "../widgets/skyscannerMultiVerticalWidget";
-
-// import BudgetWidget from "../widgets/budgetWidget";
 import Budget from "./budget/budget"
 import GovInfo from "./gov/index"
 import VisitACity from "./visitACity/visitACity"
 import TravelerTips from "./travelerTips/travelerTips";
 
 import "./results.css"
-import { BrowserRouter as Router, Switch, withRouter, NavLink, Route } from "react-router-dom"
 
 //Redux
 import { connect } from "react-redux"

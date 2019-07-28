@@ -18,7 +18,7 @@ function Budget (props) {
   console.log('visit a city')
 
   return (
-    <div className="nav-box gov-link">
+    <div className="gov-link">
       {
         countryURL &&
         <a href={`https://www.budgetyourtrip.com/${countryURL}`}
@@ -30,7 +30,7 @@ function Budget (props) {
       }
       {
         cityURL &&
-        <a href={`https://www.budgetyourtrip.com/${countryURL}/${cityURL}-${countryURL}`}
+        <a href={`https://www.budgetyourtrip.com/${countryURL}/${cityURL}`}
           target="_blank"
           rel="noopener noreferrer"
         >

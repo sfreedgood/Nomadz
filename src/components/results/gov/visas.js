@@ -8,7 +8,7 @@ function VisaInfo (props) {
   console.log(countryName)  
 
   return (
-    <div className="nav-box gov-link">
+    <div className="gov-link">
       <a href={`https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/${countryName}.html`}
         target="_blank"
         rel="noopener noreferrer"

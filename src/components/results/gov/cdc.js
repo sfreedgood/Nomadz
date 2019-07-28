@@ -9,7 +9,7 @@ function CDCinfo (props) {
   console.log(countryName)
 
   return (
-    <div className="nav-box gov-link">
+    <div className="gov-link">
       <a href={`https://wwwnc.cdc.gov/travel/destinations/traveler/none/${countryName}`}
         target="_blank"
         rel="noopener noreferrer"
