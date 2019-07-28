@@ -1,10 +1,11 @@
 import React from "react"
+import WidgetScript from "./skyscannerWidgetScript";
+
 // Documentation for widget:
 // https://partners.skyscanner.net/affiliates/widgets-documentation/flight-search-widget
 
 //Redux
 import { connect } from "react-redux"
-import WidgetScript from "./skyscannerWidgetScript";
 
 function mapStateToProps (state) {
   // const { searchQueries } = state.setup
@@ -16,7 +17,7 @@ function MultiVerticalWidget (props) {
   console.log("I'm the flight widget")
   // render () {
     return (
-      <div className="flight-search-widget">
+      <div className="flight-search-widget detail">
         <WidgetScript />
         <div data-skyscanner-widget="MultiVerticalWidget" //required
             data-associate-id="ABC_DEF_12345_56789" //required, need to get

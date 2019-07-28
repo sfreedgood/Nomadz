@@ -1,16 +1,16 @@
-import React from "react"
-import FlightSearchWidget from "../widgets/skyscannerFlights";
-import HotelSearchWidget from "../widgets/hotelWidget";
+import React, { Component } from "react"
+// import FlightSearchWidget from "../widgets/skyscannerFlights";
+// import HotelSearchWidget from "../widgets/hotelWidget";
 import SkyscannerMultiVerticalWidget from "../widgets/skyscannerMultiVerticalWidget";
 
-import BudgetWidget from "../widgets/budgetWidget";
+// import BudgetWidget from "../widgets/budgetWidget";
 import Budget from "./budget/budget"
 import GovInfo from "./gov/index"
 import VisitACity from "./visitACity/visitACity"
 import TravelerTips from "./travelerTips/travelerTips";
 
 import "./results.css"
-import { BrowserRouter as Router, Switch, withRouter, Link, Route } from "react-router-dom"
+import { BrowserRouter as Router, Switch, withRouter, NavLink, Route } from "react-router-dom"
 
 //Redux
 import { connect } from "react-redux"
@@ -21,90 +21,105 @@ function mapStateToProps (state) {
   return { country, city, budget, duration, dates }
 };
 
-function Results(props) {
+class Results extends Component {
+  state = {
+    type: null
+  }
 
-  return(
-      <div className="results">
-        <div className="results-header">
-        {
-          props.city &&
-          <h1 id="result-header-city">{props.city.label},</h1>
-        }
-        {
-          props.country &&
-          <h1 id="result-header-country">{props.country.country || props.country.label}</h1>
-        }
+  handleClick = (event) => {
+    event.persist()
+    let target = event.currentTarget.id
+    this.setState(prevState => ({
+      type: target
+    }))
+  }
+
+  render () {
+    console.log(this.state)
+    return(
+        <div className="results">
+          <div className="results-header">
+          {
+            this.props.city &&
+            <h1 id="result-header-city">{this.props.city.label},</h1>
+          }
+          {
+            this.props.country &&
+            <h1 id="result-header-country">{this.props.country.country || this.props.country.label}</h1>
+          }
+          </div>
+          <div className="nav-box-container">
+            {/* <Router> */}
+            {
+              this.props.city
+                ?
+                <div onClick={this.handleClick} id="skyscanner" className="nav-box result">
+                    <h3 className="nav-box-text">Flights</h3>
+                    <h3 className="nav-box-text">Accommodation</h3>
+                    <h3 className="nav-box-text">Transportation</h3>
+                </div>
+                :
+                <div className="nav-box no-content-error">Please enter a City to see flights</div>
+            }
+            {/* {
+              this.props.city
+                ?
+                <div onClick={this.handleClick} id="hotel" className="nav-box result" to="/hotelSearchWidget">
+                    Accommodation
+                </div>
+                :
+                <div className="nav-box no-content-error">Please enter a City to see flights</div>
+            } */}
+            {
+              this.props.country
+                ?
+                <div onClick={this.handleClick} id="budget" className="nav-box result" to="/results/budget">
+                  <h3 className="nav-box-text">Budgeting</h3>
+                </div>
+                :
+                <div className="nav-box no-content-error">Please Enter More Information</div>
+            }
+
+            {
+              (this.props.country || this.props.city) &&
+              <VisitACity country={this.props.country} city={this.props.city} />
+            }
+
+            {
+              (this.props.country || this.props.city) &&
+              <TravelerTips country={this.props.country} city={this.props.city} />
+            }
+
+            {
+              this.props.country
+                ?
+                <div onClick={this.handleClick} id="gov" className="nav-box result" to="/results/gov">
+                  <h3 className="nav-box-text">Health</h3>
+                  <h3 className="nav-box-text">Safety</h3>
+                  <h3 className="nav-box-text">Visas</h3>
+                </div>
+                :
+                <div className="nav-box no-content-error">Please Enter More Information</div>
+            }
+          </div>
+          <div className="results-display">
+            {
+              this.state.type === "gov" &&
+              <GovInfo />
+            }
+            {
+              this.state.type === "skyscanner" &&
+              <SkyscannerMultiVerticalWidget city={this.props.city} />
+            }
+            {
+              this.state.type === "budget" &&
+              <Budget country={this.props.country} city={this.props.city} />
+            }
+            </div>
         </div>
-        <div className="nav-box-container">
-          <Router>
-          {
-            props.city
-              ?
-              <Link id="flights" className="nav-box result" to="/skyscannerWidget">
-                  Flights, Accommodation & Transportation
-              </Link>
-              :
-              <div className="nav-box no-content-error">Please enter a City to see flights</div>
-          }
-          {/* {
-            props.city
-              ?
-              <Link id="hotel" className="nav-box result" to="/hotelSearchWidget">
-                  Accommodation
-              </Link>
-              :
-              <div className="nav-box no-content-error">Please enter a City to see flights</div>
-          } */}
-          {
-            props.country
-              ?
-              <Link id="budget" className="nav-box result" to="/budget">
-                Budgeting
-              </Link>
-              :
-              <div className="nav-box no-content-error">Please Enter More Information</div>
-          }
-
-          {
-            (props.country || props.city) &&
-            <VisitACity country={props.country} city={props.city} />
-          }
-
-          {
-            (props.country || props.city) &&
-            <TravelerTips country={props.country} city={props.city} />
-          }
-
-          {
-            props.country
-              ?
-              <Link id="gov" className="nav-box result" to="/gov">
-                Health, Safety & Visas
-              </Link>
-              :
-              <div className="nav-box no-content-error">Please Enter More Information</div>
-          }
-
-            <Switch>
-
-              <Route exact path="/gov"
-                component={() => <GovInfo /> }
-              />
-              <Route exact path="/sckyscannerWidget"
-                component={() => <SkyscannerMultiVerticalWidget city={props.city}/>}
-              />
-              {/* <Route exact path="/hotelSearchWidget"
-                component={() => <SkyscannerMultiVerticalWidget city={props.city}/>}
-              /> */}
-              <Route exact path="/budget"
-                component={() => <Budget country={props.country} city={props.city} />}
-              />
-            </Switch>
-          </Router>
-        </div>
-      </div>
-  )
+    )
+  }
 }
-export default withRouter(connect(
+export default connect(
   mapStateToProps
-)(Results))
+)(Results)

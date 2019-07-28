@@ -19,6 +19,12 @@ function Header () {
           fontWeight: "bold",
           color: "red"
       }}>Results</NavLink>
+      <NavLink to="/about"
+        activeClassName="selected"
+        activeStyle={{
+          fontWeight: "bold",
+          color: "red"
+      }}>About</NavLink>
       {/* <Route exact path="/" render={() => <Home />} />
       <Route path="/results" render={() => <Results />} /> */}
     </div>

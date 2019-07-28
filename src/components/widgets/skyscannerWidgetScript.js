@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import Script from "react-load-script"
 
-class FlightScript extends Component {
+class SkyscannerWidgetScript extends Component {
   state = {
     city: this.props.city
   }
@@ -25,9 +25,9 @@ class FlightScript extends Component {
         onCreate={this.handleScriptCreate.bind(this)}
         onError={this.handleScriptError.bind(this)}
         onLoad={this.handleScriptLoad.bind(this)}
-    />
+      />
     )
   }
 }
 
-export default FlightScript
+export default SkyscannerWidgetScript
