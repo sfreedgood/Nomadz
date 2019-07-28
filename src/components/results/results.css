@@ -1,6 +1,7 @@
 .nav-box {
   height: 30vh;
   width: 30vh;
+  margin: 2vw;
   background-color: azure;
   display: flex;
   flex-flow: column wrap;
@@ -8,7 +9,19 @@
 }
 
 .nav-box-container {
+  height: 90vh;
+  width: 100vw;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+}
+
+.results-header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+#result-header-city {
+  margin-right: 2vw;
 }
