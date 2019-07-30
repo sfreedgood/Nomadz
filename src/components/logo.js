@@ -1,24 +1,26 @@
 import React from "react"
 
-export default function Logo () {
+export default function Logo (props) {
   const container = {
-    display: 'inline',
+    display: 'flex',
   }
 
   const nomad = {
     color: 'black',
-    display: 'inline',
-    fontSize: "2rem",
-
+    display: 'flex',
+    fontSize: props.fontSize || "2rem", //allows fontSize to be scaled by parent if needed
+    margin: 0,
   }
 
   const z = {
     color: 'black',
-    display: 'inline',
+    display: 'flex',
     textDecoration: 'underline',
     fontStyle: "italic",
-    fontSize: "2rem",
+    fontSize: props.fontSize || "2rem",
     verticalAlign: "text-top",
+    margin: 0,
+
   }
 
   return (

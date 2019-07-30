@@ -1,0 +1,37 @@
+.about {
+  height: 90vh;
+}
+
+.youtube-container {
+  height: 40vh;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.text-content {
+  background-color: rgba(255,255,255,0.8)
+}
+
+#hashtag-we-are-nomadz {
+  margin: 0 auto;
+}
+
+.community {
+  margin-bottom: 1%;
+  font-weight: 600;
+}
+
+.mission {
+  margin-bottom: 1%;
+  font-weight: 300;
+}
+
+#instagram-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+#instagram {
+  margin-left: 2%;
+}

@@ -4,6 +4,7 @@ import { Route, Redirect } from 'react-router-dom'
 import Header from "./components/header"
 import Home from './components/home';
 import Results from './components/results';
+import About from './components/about';
 
 class App extends Component {
   state = {
@@ -25,6 +26,7 @@ class App extends Component {
         <div className="main">
           <Route exact path="/" render={() => <Home handleSubmit={this.handleSubmit}/>} />
           <Route path="/results" render={() => <Results />} />
+          <Route path="/about" render={() => <About />} />
         </div>
       </div>
     );
