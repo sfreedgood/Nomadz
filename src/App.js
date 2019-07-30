@@ -22,10 +22,10 @@ class App extends Component {
           this.state.submitted === true &&
           <Redirect to="/results" />
         }
-
-        <Route exact path="/" render={() => <Home handleSubmit={this.handleSubmit}/>} />
-        <Route path="/results" render={() => <Results />} />
-        
+        <div className="main">
+          <Route exact path="/" render={() => <Home handleSubmit={this.handleSubmit}/>} />
+          <Route path="/results" render={() => <Results />} />
+        </div>
       </div>
     );
   }

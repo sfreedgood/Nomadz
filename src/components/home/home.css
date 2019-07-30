@@ -4,9 +4,54 @@
   justify-content: space-around;
 }
 
+.query-title {
+  font-size: 2rem;
+}
+
+.home-container {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .query {
-  height: 30vw;
+  height: 30vh;
   width: 20vw;
   display: flex;
   flex-flow: column;
+  /* align-content: flex-start; */
+  justify-content: flex-start;
+  padding-top: 15vh;
+}
+
+@media only screen 
+  /* and (min-device-width: 320px)  */
+  and (max-device-width: 600px) {
+    .home-container {
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .query-title {
+      font-size: 1.5rem;
+    }
+
+    .query-container {
+      flex-flow: column;
+      justify-content: space-around;
+      align-content: space-around;
+    }
+
+    .query {
+      height: 15vh;
+      width: 80vw;
+      display: flex;
+      flex-flow: column;
+      align-self: center;
+      justify-content: center;
+      padding-top: 0;
+    }
 }

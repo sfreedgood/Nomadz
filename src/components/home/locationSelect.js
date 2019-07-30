@@ -58,7 +58,7 @@ class LocationSelectors extends Component {
     console.log(this.state.cities)
     return (
       <div id="location-selectors" className="query">
-        <h1 className="query-header">Where?</h1>
+        <h1 className="query-title">Where?</h1>
           <CountrySelector setSearchParam={this.setSearchParam} />
         {
           this.state.cities &&

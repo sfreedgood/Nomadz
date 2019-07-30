@@ -52,7 +52,7 @@ class Query extends Component {
   render () {
     return(
       <div className="query">
-        <h1>{this.state.queryTitle}</h1>
+        <h1 className="query-title">{this.state.queryTitle}</h1>
         <form className="search-field">
         <Select 
           onChange={(this.setSearchParam, 'select-option')} 

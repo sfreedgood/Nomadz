@@ -1,6 +1,8 @@
 import React from 'react'
 // import Results from './results/index'
 import { NavLink } from 'react-router-dom'
+import("./header.css")
+
 // import Home from './home';
 
 function Header () {
