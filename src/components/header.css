@@ -1,13 +1,16 @@
 .header-nav {
   height: 5vh;
-  width: 100vw;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: rgb(255,255,255);
-  padding: 2vh;
+  padding: 2vh 4vw;
 }
 
 a {
   height: 100%;
   font-size: 2rem;
+}
+
+#home {
+  justify-self: center;
 }

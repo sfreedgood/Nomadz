@@ -1,6 +1,7 @@
 import React from 'react'
 // import Results from './results/index'
 import { NavLink } from 'react-router-dom'
+import Logo from './logo';
 import("./header.css")
 
 // import Home from './home';
@@ -9,7 +10,16 @@ function Header () {
 
   return (
     <div className="header-nav">
+      <NavLink to="/about"
+        activeClassName="selected"
+        activeStyle={{
+          fontWeight: "bold",
+          color: "red"
+      }}>
+        <Logo />
+      </NavLink>
       <NavLink exact to="/" 
+              id="home"
               activeClassName="selected"
               activeStyle={{
                 fontWeight: "bold",
@@ -21,12 +31,7 @@ function Header () {
           fontWeight: "bold",
           color: "red"
       }}>Results</NavLink>
-      <NavLink to="/about"
-        activeClassName="selected"
-        activeStyle={{
-          fontWeight: "bold",
-          color: "red"
-      }}>About</NavLink>
+
       {/* <Route exact path="/" render={() => <Home />} />
       <Route path="/results" render={() => <Results />} /> */}
     </div>

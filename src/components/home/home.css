@@ -9,10 +9,16 @@
 }
 
 .home-container {
-  height: 80vh;
+  height: 95vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.location-display {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
 .query {
@@ -22,7 +28,10 @@
   flex-flow: column;
   /* align-content: flex-start; */
   justify-content: flex-start;
-  padding-top: 15vh;
+}
+
+button {
+  margin-bottom: 5vh;
 }
 
 @media only screen 

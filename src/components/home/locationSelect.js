@@ -54,6 +54,8 @@ class LocationSelectors extends Component {
     }
   }
 
+  
+
   render() {
     console.log(this.state.cities)
     return (
@@ -68,14 +70,14 @@ class LocationSelectors extends Component {
             // </div>
         }
         
-        <div className="location-display">
+        {/* <div className="location-display">
           {
             this.state.city && // if there is a city, show the city name
             <div className="current-city">
               {this.state.city.label},
             </div>
-          }
-          {
+          } */}
+          {/* {
             this.state.city && // if there is a city, show the city country
             <div className="current-country">
               {this.state.city.country}
@@ -86,11 +88,11 @@ class LocationSelectors extends Component {
             <div className="current-country">
               {this.state.country.label}
             </div>
-          }
+          } */}
 
           <button id="city-selector" onClick={this.getCities} >Show Me All Cities</button>
         
-        </div>
+        {/* </div> */}
         
       </div>
     );

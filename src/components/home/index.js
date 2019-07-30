@@ -41,10 +41,32 @@ const Home = (props) => {
   return(
     <div className="home-container">
       <h1 className="home-header">Let's start something special</h1>
-      <div className="query-container">
-        <LocationSelectors />
-        {allQueries}
-      </div>
+        <div className="content">
+          <div className="location-display">
+          {
+            props.city && // if there is a city, show the city name
+            <h3 className="current-selection">
+              {props.city.label},
+            </h3>
+          }
+          {
+            props.city && // if there is a city, show the city country
+            <h3 className="current-selection">
+              {props.city.country}
+            </h3>
+          }
+          {
+            props.country && !props.city && // if there is a country, but not a city, show the country
+            <h3 className="current-selection">
+              {props.country.label}
+            </h3>
+          }
+          </div>
+          <div className="query-container">
+            <LocationSelectors />
+            {allQueries}
+          </div>
+        </div>
       <button type="submit" onClick={props.handleSubmit} >LET'S GO</button>
     </div>
   )
