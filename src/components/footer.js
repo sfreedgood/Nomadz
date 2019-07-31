@@ -7,10 +7,15 @@ export default function Footer () {
 
   return (
     <div className="footer">
-      <p className="copyright">&copy; Copyright 2019</p>
-      <Logo fontSize={fontSize} />
-      <p>Travel</p>
-      <p>All Rights Reserved</p>
+      <div className="left">
+        <p className="copyright">&copy; Copyright 2019</p>
+        <Logo fontSize={fontSize} />
+        <p>Travel</p>
+        <p>All Rights Reserved</p>
+      </div>
+      <div className="right">
+        <a href="https://samfreedgood.dev"><p>Built by: Sam Freedgood</p></a>
+      </div>
     </div>
   )
 }

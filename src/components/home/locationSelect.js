@@ -40,6 +40,10 @@ class LocationSelectors extends Component {
     }
   }
 
+  componentDidMount = () => {
+    this.setState(prevState => ({ cities: topDestinations }))
+  }
+
   getCities = (event) => {
     // console.log(event.label)
     if (event.label) {
@@ -62,13 +66,12 @@ class LocationSelectors extends Component {
       <div id="location-selectors" className="query">
         <h1 className="query-title">WHERE?</h1>
           <CountrySelector setSearchParam={this.setSearchParam} />
-        {
-          this.state.cities &&
-            // <div className="location-sub-squery">
-              // {/* <h2 className="sub-query-header">City</h2> */}
+
+            <div className="location-sub-squery">
+              {/* <h2 className="sub-query-header">City</h2> */}
               <CitySelector cities={this.state.cities} type={this.props.query} country={this.state.country} setSearchParam={this.setSearchParam} />
-            // </div>
-        }
+            </div>
+        
         
         {/* <div className="location-display">
           {
@@ -90,7 +93,7 @@ class LocationSelectors extends Component {
             </div>
           } */}
 
-          <button id="city-selector" onClick={this.getCities} >Show Me All Cities</button>
+          {/* <button id="city-selector" onClick={this.getCities} >Show Me All Cities</button> */}
         
         {/* </div> */}
         

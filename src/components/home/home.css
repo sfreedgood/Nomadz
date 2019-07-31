@@ -2,7 +2,8 @@
   background-image: url("/assets/rocky_ocean.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 87vh;
+  background-position-y: bottom;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -16,17 +17,24 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  margin-top: 5%;
   /* align-items: flex-start; */
 }
 
 .query-title {
   font-size: 1.3rem;
+  background-color: rgba(255,255,255);
 }
 
 .location-display {
+  height: fit-content;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+}
+
+.current-selection {
+  margin: 0;
 }
 
 .query {
@@ -40,6 +48,8 @@
 }
 
 button {
+  font-family: "Didot";
+  font-weight: 800;
   width: 20vw;
   border: none;
   padding: 1rem 2rem;
@@ -48,7 +58,7 @@ button {
   text-decoration: none;
   background: #ffffff;
   color: #000000;
-  font-size: 1rem;
+  font-size: 1.5rem;
   cursor: pointer;
   text-align: center;
   transition: background 250ms ease-in-out, 

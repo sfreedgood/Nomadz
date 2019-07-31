@@ -12,7 +12,10 @@ function Header () {
   return (
     <div className="header-nav">
       <div className="nav-container">
-        <Logo fontSize={fontSize}/>
+      <NavLink exact to="/" 
+                id="home"
+                activeClassName="selected"
+        ><Logo fontSize={fontSize}/></NavLink>
       </div>
       <div className="nav-container">
         <NavLink exact to="/" 
@@ -20,29 +23,26 @@ function Header () {
                 activeClassName="selected"
                 activeStyle={{
                   fontWeight: "bold",
-                  color: "red",
-                  backgroundColor: "rgb(240,240,240)",
-                  padding: "2vh 2vw",
+                  textDecoration: "underline",
+                  padding: "2vh 0",
         }}>Home</NavLink>
         <NavLink to="/results"
           activeClassName="selected"
           activeStyle={{
             fontWeight: "bold",
-            color: "red",
-            backgroundColor: "rgb(240,240,240)",
-            padding: "2vh 2vw",
+            textDecoration: "underline",
+            padding: "2vh 0",
         }}>Results</NavLink>
         <NavLink to="/about"
           activeClassName="selected"
           activeStyle={{
             fontWeight: "bold",
-            color: "red",
-            backgroundColor: "rgb(240,240,240)",
-            padding: "2vh 2vw",
+            textDecoration: "underline",
+            padding: "2vh 0",
         }}>About</NavLink>
       </div>
-      {/* <Route exact path="/" render={() => <Home />} />
-      <Route path="/results" render={() => <Results />} /> */}
+      {/* <Route exact path="/" render={() => <Home />} />  */}
+      {/* <Route path="/results" render={() => <Results />} />  */}
     </div>
   )
 }

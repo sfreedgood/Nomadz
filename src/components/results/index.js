@@ -48,11 +48,11 @@ class Results extends Component {
           <div className="results-header">
           {
             this.props.city &&
-            <h1 id="result-header-city">{this.props.city.label},</h1>
+            <h1 className="result-header-text">{this.props.city.label},</h1>
           }
           {
             this.props.country &&
-            <h1 id="result-header-country">{this.props.country.country || this.props.country.label}</h1>
+            <h1 className="result-header-text">{this.props.country.country || this.props.country.label}</h1>
           }
           </div>
           <div className="nav-box-container">

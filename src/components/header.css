@@ -1,17 +1,17 @@
 .header-nav {
-  height: 9vh;
+  height: 6vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: rgb(255,255,255);
-  color: rgb(0,0,0);
-  margin: 0 4vw;
+  margin: 0 2vw; /* make all margins to side of screen this */
 }
 
 a {
+  color: rgb(0,0,0);
   height: 100%;
   font-size: 1.5rem;
-  margin: auto 2vw;
+  margin: auto 0 auto 1vw;
 }
 
 #home {
