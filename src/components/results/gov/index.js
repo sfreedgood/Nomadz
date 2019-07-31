@@ -15,7 +15,7 @@ function GovInfo (props) {
   console.log("I'm here")
 
   return (
-    <div className="gov">
+    <div className="gov-link">
 
       <VisaInfo country={props.country} />
       <CDCinfo country={props.country} />

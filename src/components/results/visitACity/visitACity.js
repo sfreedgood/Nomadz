@@ -15,14 +15,14 @@ function VisitACity (props) {
   let destinationURL = destination.toLowerCase().replace(regex, "-")
 
   return (
-    <div className="nav-box gov-link">
+    <div className="nav-box result">
       <a href={`https://www.visitacity.com/en/${destinationURL}/activities/all-activities`}
         target="_blank"
         rel="noopener noreferrer"
       >
-        <h3 className="nav-box-text">Things To Do</h3>
-        <h3 className="nav-box-text"> & </h3>
-        <h3 className="nav-box-text">Guides</h3>
+        <h3 className="nav-box-text">THING TO DO & GUIDES</h3>
+        {/* <h3 className="nav-box-text"> & </h3>
+        <h3 className="nav-box-text">Guides</h3> */}
       </a>
     </div>
   )

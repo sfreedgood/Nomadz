@@ -1,16 +1,24 @@
+.results {
+  height: 87vh;
+  background-image: url("/assets/NomadzBackground.jpeg");
+  background-size: cover;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+}
+
 .nav-box {
   height: 100%;
   width: 18%;
   margin: 0 1%;
-  background-color: azure;
+  background-color: white;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
-  align-content: space-around;
+  justify-content: center;
+  align-content: center;
 }
 
 .results-display {
-  height: 70vh;
+  height: 68%;
   width: 95vw;
   margin: 0 auto;
   display: flex;
@@ -35,8 +43,29 @@
 
 .nav-box-text {
   margin: 0;
+  color: black;
+  font-size: 0.8rem;
 }
-/* 
-#result-header-city {
-  margin-right: 2vw;
-} */
+
+.nav-box > a {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.gov-link {
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
+.detail-link {
+  height: fit-content;
+  margin: 2vh auto;
+  width: 50%;
+  overflow: visible;
+  padding: 0.5% 5%;
+  background-color: white;
+}

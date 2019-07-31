@@ -10,7 +10,8 @@ function CDCinfo (props) {
 
   return (
     <div className="gov-link">
-      <a href={`https://wwwnc.cdc.gov/travel/destinations/traveler/none/${countryName}`}
+      <a className="detail-link"
+        href={`https://wwwnc.cdc.gov/travel/destinations/traveler/none/${countryName}`}
         target="_blank"
         rel="noopener noreferrer"
       >

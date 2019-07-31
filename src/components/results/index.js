@@ -61,9 +61,7 @@ class Results extends Component {
               this.props.city
                 ?
                 <div onClick={this.handleClick} id="skyscanner" className="nav-box result">
-                    <h3 className="nav-box-text">Flights</h3>
-                    <h3 className="nav-box-text">Accommodation</h3>
-                    <h3 className="nav-box-text">Transportation</h3>
+                    <h3 className="nav-box-text">FLIGHTS & ACCOMMODATION</h3>
                 </div>
                 :
                 <div className="nav-box no-content-error">Please enter a City to see flights</div>
@@ -81,7 +79,7 @@ class Results extends Component {
               this.props.country
                 ?
                 <div onClick={this.handleClick} id="budget" className="nav-box result" to="/results/budget">
-                  <h3 className="nav-box-text">Budgeting</h3>
+                  <h3 className="nav-box-text">BUDGETING</h3>
                 </div>
                 :
                 <div className="nav-box no-content-error">Please Enter More Information</div>
@@ -101,9 +99,9 @@ class Results extends Component {
               this.props.country
                 ?
                 <div onClick={this.handleClick} id="gov" className="nav-box result" to="/results/gov">
-                  <h3 className="nav-box-text">Health</h3>
-                  <h3 className="nav-box-text">Safety</h3>
-                  <h3 className="nav-box-text">Visas</h3>
+                  <h3 className="nav-box-text">HEALTH, SAFETY & VISAS</h3>
+                  {/* <h3 className="nav-box-text">Safety</h3>
+                  <h3 className="nav-box-text">Visas</h3> */}
                 </div>
                 :
                 <div className="nav-box no-content-error">Please Enter More Information</div>

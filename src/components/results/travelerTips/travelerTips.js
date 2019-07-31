@@ -19,14 +19,14 @@ function TravelerTips (props) {
   if (cityURL === countryURL) cityURL = null // for places like Singapore, Singapore; reset values consistent with url links below
 
   return (
-    <div className="nav-box gov-link">
+    <div className="nav-box result">
       {
         countryURL && !cityURL &&
         <a href={`https://www.lonelyplanet.com/${countryURL}`}
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h3 className="nav-box-text">Traveler Tips</h3>
+          <h3 className="nav-box-text">TRAVELER TIPS</h3>
         </a>
       }
       {
@@ -35,7 +35,7 @@ function TravelerTips (props) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h3 className="nav-box-text">Traveler Tips</h3>
+          <h3 className="nav-box-text">TRAVELER TIPS</h3>
         </a>
       }
     </div>

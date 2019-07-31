@@ -20,7 +20,7 @@ function mapDispatchToProps (dispatch) { //list of action-creators to be dispatc
 //Component
 class Query extends Component {
   state = {
-    queryTitle: this.props.query.charAt(0).toUpperCase() + this.props.query.slice(1) + "?", //Capitalizes only the first character, then concatenates rest of word (omitting first character)
+    queryTitle: this.props.query.toUpperCase() + "?", 
     queryOptions: this.props.queryData.map( (item, index) => {
       return {value: item, label: item}
     }),

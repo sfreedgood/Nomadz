@@ -1,0 +1,17 @@
+.footer {
+  height: 2vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgb(255,255,255);
+  padding: 1vh 4vw;
+}
+
+p {
+  margin: 0 0 0 5px;
+  font-size: 0.8rem;
+}
+
+.copyright {
+  margin-right: 5px;
+}

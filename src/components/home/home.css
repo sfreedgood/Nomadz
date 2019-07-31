@@ -1,18 +1,26 @@
+.home-container {
+  background-image: url("/assets/rocky_ocean.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 87vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.home-header {
+  margin: 5vh auto;
+}
+
 .query-container {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  /* align-items: flex-start; */
 }
 
 .query-title {
-  font-size: 2rem;
-}
-
-.home-container {
-  height: 95vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  font-size: 1.3rem;
 }
 
 .location-display {
@@ -22,6 +30,7 @@
 }
 
 .query {
+  /* margin-top: 10vh; */
   height: 30vh;
   width: 20vw;
   display: flex;
@@ -31,14 +40,42 @@
 }
 
 button {
+  width: 20vw;
+  border: none;
+  padding: 1rem 2rem;
+  margin: 0 auto;
   margin-bottom: 5vh;
+  text-decoration: none;
+  background: #ffffff;
+  color: #000000;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, 
+              transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button:hover,
+button:focus {
+  background: #93c2fb;
+}
+
+button:focus {
+  outline: 1px solid #fff;
+  outline-offset: -4px;
+}
+
+button:active {
+  transform: scale(0.99);
 }
 
 @media only screen 
   /* and (min-device-width: 320px)  */
   and (max-device-width: 600px) {
     .home-container {
-      height: 90vh;
+      height: 91vh;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -49,18 +86,18 @@ button {
     }
 
     .query-container {
-      flex-flow: column;
+      flex-flow: row wrap;
       justify-content: space-around;
       align-content: space-around;
     }
 
     .query {
-      height: 15vh;
-      width: 80vw;
+      /* height: 20vh; */
+      width: 40vw;
       display: flex;
       flex-flow: column;
       align-self: center;
-      justify-content: center;
+      justify-content: flex-start;
       padding-top: 0;
     }
 }

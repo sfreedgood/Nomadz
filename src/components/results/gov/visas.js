@@ -9,7 +9,8 @@ function VisaInfo (props) {
 
   return (
     <div className="gov-link">
-      <a href={`https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/${countryName}.html`}
+      <a className="detail-link"
+        href={`https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/${countryName}.html`}
         target="_blank"
         rel="noopener noreferrer"
       >

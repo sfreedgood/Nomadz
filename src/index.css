@@ -1,6 +1,6 @@
-html {
+/* html {
   width: 100%;
-}
+} */
 
 body {
   margin: 0;
@@ -9,9 +9,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("/assets/NomadzBackground.jpeg");
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 code {

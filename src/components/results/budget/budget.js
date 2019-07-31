@@ -21,7 +21,8 @@ function Budget (props) {
     <div className="gov-link">
       {
         countryURL &&
-        <a href={`https://www.budgetyourtrip.com/${countryURL}`}
+        <a className="detail-link" 
+          href={`https://www.budgetyourtrip.com/${countryURL}`}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -30,7 +31,8 @@ function Budget (props) {
       }
       {
         cityURL &&
-        <a href={`https://www.budgetyourtrip.com/${countryURL}/${cityURL}`}
+        <a className="detail-link" 
+          href={`https://www.budgetyourtrip.com/${countryURL}/${cityURL}`}
           target="_blank"
           rel="noopener noreferrer"
         >
