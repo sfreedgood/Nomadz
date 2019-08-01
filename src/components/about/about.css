@@ -1,5 +1,14 @@
 .about {
   height: 90vh;
+  background-image: url("/assets/sunset_spires.JPG");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+}
+
+#title {
+  margin: 0;
+  padding: 1%;
 }
 
 .youtube-container {
@@ -9,7 +18,9 @@
 }
 
 .text-content {
-  background-color: rgba(255,255,255,0.8)
+  background-color: rgba(255,255,255,0.9);
+  margin: auto 10%;
+  padding: 2%;
 }
 
 #hashtag-we-are-nomadz {
@@ -17,6 +28,7 @@
 }
 
 .community {
+  margin: 0;
   margin-bottom: 1%;
   font-weight: 600;
 }
@@ -33,5 +45,6 @@
 }
 
 #instagram {
+  margin: 0;
   margin-left: 2%;
 }

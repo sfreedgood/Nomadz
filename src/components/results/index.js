@@ -42,7 +42,6 @@ class Results extends Component {
   }
 
   render () {
-    console.log(this.state)
     return(
         <div className="results">
           <div className="results-header">

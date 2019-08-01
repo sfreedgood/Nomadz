@@ -1,9 +1,8 @@
 import React from "react"
 import "./home.css"
 import Query from "./query"
-import Results from "../results/index";
 import LocationSelectors from "./locationSelect"
-import { withRouter, Switch, Link, Route } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 //Redux
 import { connect } from "react-redux"
@@ -11,21 +10,13 @@ import { connect } from "react-redux"
 function mapStateToProps (state) {
   const { searchQueries } = state.setup
   const { country, city, budget, duration, dates } = state.searchParams
-  // console.log(country)
 
   return { searchQueries, country, city, budget, duration, dates }
 };
 
-// function mapDispatchToProps (dispatch) { //list of action-creators to be dispatched
-//   return {
-//     setDestinationOptions: (countryList) => dispatch({type: "SET_DESTINATION_OPTIONS", payload: {countryList}}), 
-//   }
-// }
-
 const Home = (props) => {
   const queryOptions = Object.keys(props.searchQueries)
   const queryData = props.searchQueries
-  // console.log(queryData)
 
   let allQueries = queryOptions.map( (queryOption, index) => {
     return (
@@ -37,8 +28,6 @@ const Home = (props) => {
       />
     )
   })
-
-  console.log(props)
 
   return(
     <div className="home-container">
@@ -74,15 +63,10 @@ const Home = (props) => {
             LET'S GO
           </Link>
         </button>
-
-        {/* <Switch>
-          <Route path="/results" component={ Results }/>
-        </Switch> */}
     </div>
   )
 }
 
 export default connect(
   mapStateToProps,
-  // mapDispatchToProps
 )(Home)

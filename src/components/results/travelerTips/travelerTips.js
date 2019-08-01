@@ -6,13 +6,15 @@ function TravelerTips (props) {
   let countryURL
   let cityURL
 
+  console.log(props.city)
+
   if (props.city){
     let city = props.city.label
     cityURL = city.toLowerCase().replace(regex, "-")
     let country = props.city.country || props.country.label
     countryURL = country.toLowerCase().replace(regex, "-")
   } else {
-    let country = props.city.country || props.country.label
+    let country = props.country.label
     countryURL = country.toLowerCase().replace(regex, "-")
   }
   

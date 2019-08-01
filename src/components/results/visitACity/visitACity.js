@@ -21,8 +21,7 @@ function VisitACity (props) {
         rel="noopener noreferrer"
       >
         <h3 className="nav-box-text">THING TO DO & GUIDES</h3>
-        {/* <h3 className="nav-box-text"> & </h3>
-        <h3 className="nav-box-text">Guides</h3> */}
+
       </a>
     </div>
   )

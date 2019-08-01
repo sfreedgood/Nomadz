@@ -27,7 +27,6 @@ class LocationSelectors extends Component {
    }
 
   setSearchParam = (event) => {
-    console.log(event)
     let selection = event //country list event is an object, all other event are standard targets
     if (event.city) {
       this.setState({ city: selection })
@@ -61,7 +60,6 @@ class LocationSelectors extends Component {
   
 
   render() {
-    console.log(this.state.cities)
     return (
       <div id="location-selectors" className="query">
         <h1 className="query-title">WHERE?</h1>
