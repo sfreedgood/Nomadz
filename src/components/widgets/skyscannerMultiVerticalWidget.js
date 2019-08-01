@@ -13,12 +13,25 @@ function mapStateToProps (state) {
   return { city }
 };
 
-function MultiVerticalWidget (props) {
-  console.log("I'm the flight widget")
+
+const styles = {
+  backgroundColor: "rgba(255,255,255,0.9)",
+  display: "none",
+  height: "90%",
+  margin: "1%",
+  padding: "1%",  
+}
+
+class MultiVerticalWidget extends React.Component {
+  componentDidMount() {
+    window.skyscanner.widgets.load();
+  }
+
+  render() {
   // render () {
     return (
-      <div id="skyscanner-widget" className="flight-search-widget detail" style={{display: "none", height: "100%"}}>
-        <WidgetScript />
+      <div id="skyscanner-widget" className="flight-search-widget detail" style={styles}>
+        {/* <WidgetScript /> */}
         <div data-skyscanner-widget="MultiVerticalWidget" //required
             data-associate-id="ABC_DEF_12345_56789" //required, need to get
             data-locale="en-GB"
@@ -31,7 +44,7 @@ function MultiVerticalWidget (props) {
         </div>
       </div>
     )
-  // }
+  }
 }
 
 export default connect(

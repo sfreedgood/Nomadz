@@ -1,7 +1,9 @@
 import React from "react"
 import "./home.css"
 import Query from "./query"
+import Results from "../results/index";
 import LocationSelectors from "./locationSelect"
+import { withRouter, Switch, Link, Route } from "react-router-dom"
 
 //Redux
 import { connect } from "react-redux"
@@ -67,7 +69,15 @@ const Home = (props) => {
             {allQueries}
           </div>
         </div>
-      <button type="submit" onClick={props.handleSubmit} >LET'S GO</button>
+        <button>
+          <Link to="/results">
+            LET'S GO
+          </Link>
+        </button>
+
+        {/* <Switch>
+          <Route path="/results" component={ Results }/>
+        </Switch> */}
     </div>
   )
 }

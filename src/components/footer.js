@@ -13,9 +13,9 @@ export default function Footer () {
         <p>Travel</p>
         <p>All Rights Reserved</p>
       </div>
-      <div className="right">
-        <a href="https://samfreedgood.dev"><p>Built by: Sam Freedgood</p></a>
-      </div>
+        <a href="https://samfreedgood.dev" target="_blank" rel="noopener noreferrer">
+          <p>Built by: Sam Freedgood</p>
+        </a>
     </div>
   )
 }

@@ -15,7 +15,7 @@ function CDCinfo (props) {
         target="_blank"
         rel="noopener noreferrer"
       >
-        CDC Information for {props.country.label}
+        Health Information for {props.country.label}
       </a>
     </div>
   )

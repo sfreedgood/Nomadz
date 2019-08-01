@@ -16,7 +16,7 @@ function VisitACity (props) {
 
   return (
     <div className="nav-box result">
-      <a href={`https://www.visitacity.com/en/${destinationURL}/activities/all-activities`}
+      <a href={`https://www.visitacity.com/en/${destinationURL}`} // if this causes links to fail, append the following onto the end of the url "/activities/all-activities"
         target="_blank"
         rel="noopener noreferrer"
       >
