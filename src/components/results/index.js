@@ -67,7 +67,7 @@ class Results extends Component {
                   <h3 className="nav-box-text">BUDGETING</h3>
                 </div>
                 :
-                <div className="nav-box no-content-error">Please Enter More Information</div>
+                <div className="nav-box nav-box-text">Please Enter More Information</div>
             }
 
             {
@@ -89,7 +89,7 @@ class Results extends Component {
                   <h3 className="nav-box-text">Visas</h3> */}
                 </div>
                 :
-                <div className="nav-box no-content-error">Please Enter More Information</div>
+                <div className="nav-box nav-box-text">Please Enter More Information</div>
             }
           </div>
           <div className="results-display">

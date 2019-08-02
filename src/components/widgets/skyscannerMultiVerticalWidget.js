@@ -17,7 +17,9 @@ const styles = {
   display: "none",
   height: "90%",
   margin: "1%",
-  padding: "1%",  
+  padding: "1%",
+  minWidth: "400px",
+  alignSelf: "center"
 }
 
 class MultiVerticalWidget extends React.Component {
