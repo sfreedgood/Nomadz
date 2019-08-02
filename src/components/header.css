@@ -24,20 +24,19 @@ a {
   justify-self: center;
 }
 
-@media only screen 
+/* @media only screen 
   and (min-device-width: 400px) 
   and (max-device-width: 600px) {
     a {
       font-size: 1.2rem;
 
     }
-}
+} */
 
-@media only screen 
-  /* and (min-device-width: 320px)  */
+/* @media only screen 
   and (max-device-width: 400px) {
     a {
       font-size: 0.8rem;
 
     }
-}
+} */

@@ -8,14 +8,15 @@
 }
 
 #title {
+  font-size: 1.7rem;
   margin: 0;
   padding: 1%;
 }
 
 .youtube-container {
-  height: 40vh;
+  height: 45vh;
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 800px;
 }
 
 .text-content {
