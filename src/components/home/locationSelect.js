@@ -62,12 +62,14 @@ class LocationSelectors extends Component {
     return (
       <div id="location-selectors" className="query">
         <h1 className="query-title">WHERE?</h1>
-          <CountrySelector setSearchParam={this.setSearchParam} />
-
-            <div className="location-sub-squery">
-              {/* <h2 className="sub-query-header">City</h2> */}
-              <CitySelector cities={this.state.cities} type={this.props.query} country={this.state.country} setSearchParam={this.setSearchParam} />
-            </div>
+        <div className="location-dropdowns">
+          <div className="location-sub-query">
+            <CountrySelector setSearchParam={this.setSearchParam} />
+          </div>
+          <div className="location-sub-query">
+            <CitySelector cities={this.state.cities} type={this.props.query} country={this.state.country} setSearchParam={this.setSearchParam} />
+          </div>
+        </div>
       </div>
     );
   }

@@ -2,6 +2,7 @@
   background-image: url("/assets/rocky_ocean.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position-x: center;
   background-position-y: bottom;
   height: 90vh;
   display: -webkit-box;
@@ -31,7 +32,7 @@
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin-top: 3%;
-  /* align-items: flex-start; */
+  align-items: flex-start;
 }
 
 .query-title {
@@ -114,52 +115,73 @@ button:active {
 }
 
 @media only screen 
-  /* and (min-device-width: 320px)  */
+  and (min-device-width: 400px) 
   and (max-device-width: 600px) {
     .home-container {
-      height: 91vh;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
+      -webkit-box-pack: space-evenly;
+          -ms-flex-pack: space-evenly;
+              justify-content: space-evenly;
+    }
+
+    .home-header {
+      margin: 1vh auto;
     }
 
     .query-title {
-      font-size: 1.5rem;
-    }
-
-    .query-container {
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-flow: row wrap;
-              flex-flow: row wrap;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
-      -ms-flex-line-pack: distribute;
-          align-content: space-around;
+      font-size: 1.3rem;
     }
 
     .query {
-      /* height: 20vh; */
+      height: 25vh;
       width: 40vw;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-flow: column;
-              flex-flow: column;
-      -ms-flex-item-align: center;
-          align-self: center;
-      -webkit-box-pack: start;
-          -ms-flex-pack: start;
-              justify-content: flex-start;
       padding-top: 0;
+    }
+
+    button {
+      width: 50vw;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+    }
+}
+
+@media only screen 
+  and (max-device-width: 400px) {
+    .home-header {
+      margin: 2vh auto;
+      font-size: 1.6rem;
+    }
+
+    .current-selection {
+      font-size: 1.3rem;
+    }
+
+    .query-container {
+      margin: 0;
+    }
+
+    .location-dropdowns {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .location-sub-query {
+      width: 48%;
+    }
+
+    .query {
+      height: 18vh;
+      width: 75vw;
+      padding-top: 0;
+    }
+
+    .query-title {
+      font-size: 1rem;
+    }
+
+    button {
+      width: 50vw;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
     }
 }
