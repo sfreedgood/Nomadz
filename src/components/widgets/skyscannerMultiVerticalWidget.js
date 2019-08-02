@@ -26,7 +26,7 @@ class MultiVerticalWidget extends React.Component {
   }
 
   render() {
-    let destination = this.props.city ? this.props.city.city : null //checks if city in props, if not, destination not pre-populated, if yes, prepopulated with selected city
+    let destination = this.props.city ? this.props.city.city : undefined //checks if city in props, if not, destination not pre-populated, if yes, prepopulated with selected city
     return (
       <div id="skyscanner-widget" className="flight-search-widget detail" style={styles}>
         <div data-skyscanner-widget="MultiVerticalWidget" //required

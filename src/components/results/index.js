@@ -55,25 +55,11 @@ class Results extends Component {
           }
           </div>
           <div className="nav-box-container">
-            {/* <Router> */}
-            {
-              this.props.city
-                ?
-                <div onClick={this.handleClick} id="skyscanner" className="nav-box result">
-                    <h3 className="nav-box-text">FLIGHTS & ACCOMMODATION</h3>
-                </div>
-                :
-                <div className="nav-box no-content-error">Please enter a City to see flights</div>
-            }
-            {/* {
-              this.props.city
-                ?
-                <div onClick={this.handleClick} id="hotel" className="nav-box result" to="/hotelSearchWidget">
-                    Accommodation
-                </div>
-                :
-                <div className="nav-box no-content-error">Please enter a City to see flights</div>
-            } */}
+
+            <div onClick={this.handleClick} id="skyscanner" className="nav-box result">
+                <h3 className="nav-box-text">FLIGHTS & ACCOMMODATION</h3>
+            </div>
+            
             {
               this.props.country
                 ?

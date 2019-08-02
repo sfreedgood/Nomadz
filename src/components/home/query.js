@@ -27,9 +27,7 @@ class Query extends Component {
   }
 
   setSearchParam = (event) => {
-    console.log(event.value)
     let selection = event.value //country list event is an object, all other event are standard targets
-    console.log(this.props.query)
     this.setState({
       value: selection
     })

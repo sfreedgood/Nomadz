@@ -1,8 +1,14 @@
 .header-nav {
   height: 6vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: rgb(255,255,255);
   margin: 0 2vw; /* make all margins to side of screen this */
 }
@@ -10,10 +16,28 @@
 a {
   color: rgb(0,0,0);
   height: 100%;
-  font-size: 1.5rem;
+  font-size: 0.8rem;
   margin: auto 0 auto 1vw;
 }
 
 #home {
   justify-self: center;
+}
+
+@media only screen 
+  and (min-device-width: 400px) 
+  and (max-device-width: 600px) {
+    a {
+      font-size: 1.2rem;
+
+    }
+}
+
+@media only screen 
+  /* and (min-device-width: 320px)  */
+  and (max-device-width: 400px) {
+    a {
+      font-size: 0.8rem;
+
+    }
 }

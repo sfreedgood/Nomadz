@@ -14,7 +14,7 @@ function VisaInfo (props) {
         target="_blank"
         rel="noopener noreferrer"
       >
-        Visa Information for {props.country.label}
+        Safety & Visa Information for {props.country.label}
       </a>
     </div>
   )
