@@ -22,12 +22,10 @@ export default function About () {
         <h4 className="community">Understanding that together, we are part of something greater: a global community.</h4>
         <NomadzInstaHash fontSize={hashtagFontSize}/>
         <h4 className="mission">Everything we do at NOMADZ is to fit what we believe is most important to our generation. We know how busy life can get, which is why we want to make the travel planning process easy, personal, and efficient.</h4>
-        {/* <div id="instagram-container"> */}
           <h4 className="mission">Make sure to stay up to date by following us on Instagram: </h4>
           <h4 id='instagram'>
             <NomadzInstaAt fontSize={hashtagFontSize}/>
           </h4>
-        {/* </div> */}
       </div>
     </div>
   )

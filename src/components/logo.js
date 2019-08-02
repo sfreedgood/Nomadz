@@ -1,32 +1,16 @@
 import React from "react"
+import "./logo.css"
 
 export default function Logo (props) {
-  const container = {
-    display: 'flex',
-  }
-
-  const nomad = {
-    color: 'black',
-    display: 'flex',
+  
+  const fontSize = {
     fontSize: props.fontSize || "2rem", //allows fontSize to be scaled by parent if needed
-    margin: 0,
-  }
-
-  const z = {
-    color: 'black',
-    display: 'flex',
-    textDecoration: 'underline',
-    fontStyle: "italic",
-    fontSize: props.fontSize || "2rem",
-    verticalAlign: "text-top",
-    margin: 0,
-
   }
 
   return (
-    <div className="logo" style={container}>
-      <h1 style={nomad}>NOMAD</h1>
-      <h1 style={z}>Z</h1>
+    <div id="logo" style={fontSize}>
+      <h1 id="nomad" style={fontSize}>NOMAD</h1>
+      <h1 id="z" style={fontSize}>Z</h1>
     </div>
   )
 }
