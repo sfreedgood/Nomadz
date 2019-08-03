@@ -58,7 +58,7 @@ const Home = (props) => {
             {allQueries}
           </div>
         </div>
-        <button>
+        <button className="lets-go-btn">
           <Link to="/results">
             LET'S GO
           </Link>
