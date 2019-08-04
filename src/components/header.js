@@ -1,7 +1,7 @@
 import React from 'react'
 // import Results from './results/index'
 import { NavLink } from 'react-router-dom'
-import Logo from './logo';
+import Logo from './logo.js';
 import("./header.css")
 
 // import Home from './home';

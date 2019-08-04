@@ -1,6 +1,6 @@
 import React from 'react'
-import VisaInfo from './visas';
-import CDCinfo from './health';
+import VisaInfo from './visas.js';
+import CDCinfo from './health.js';
 import "../results.css";
 
 //Redux

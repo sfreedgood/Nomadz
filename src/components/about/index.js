@@ -1,6 +1,6 @@
 import React from 'react'
-import NomadzInstaHash from './nomadzInstagramHashtag'
-import NomadzInstaAt from './nomadzInstagramAt'
+import NomadzInstaHash from './nomadzInstagramHashtag.js'
+import NomadzInstaAt from './nomadzInstagramAt.js'
 import './about.css'
 
 export default function About () {

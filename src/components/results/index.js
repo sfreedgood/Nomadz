@@ -1,9 +1,9 @@
 import React, { Component } from "react"
-import SkyscannerMultiVerticalWidget from "../widgets/skyscannerMultiVerticalWidget";
-import Budget from "./budget/budget"
-import GovInfo from "./gov/index"
-import VisitACity from "./visitACity/visitACity"
-import TravelerTips from "./travelerTips/travelerTips";
+import SkyscannerMultiVerticalWidget from "../widgets/skyscannerMultiVerticalWidget.js";
+import Budget from "./budget/budget.js"
+import GovInfo from "./gov/index.js"
+import VisitACity from "./visitACity/visitACity.js"
+import TravelerTips from "./travelerTips/travelerTips.js";
 
 import "./results.css"
 

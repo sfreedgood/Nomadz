@@ -1,7 +1,7 @@
 import React, { Component } from "react"
-import CountrySelector from "./countrySelect";
-import CitySelector from "./citySelect"
-import topDestinations from "../../redux/top100Destinations"
+import CountrySelector from "./countrySelect.js";
+import CitySelector from "./citySelect.js"
+import topDestinations from "../../redux/top100Destinations.js"
 import "./home.css"
 
 

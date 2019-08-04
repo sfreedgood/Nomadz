@@ -47,7 +47,6 @@ class MultiVerticalWidget extends React.Component {
   }
 
   handleScale = () => {
-    console.log(this.state)
     if (this.state.width <= 400) {
       this.setState({widgetScale: 0.5})
     } else if (this.state.width <= 600) {
@@ -60,8 +59,6 @@ class MultiVerticalWidget extends React.Component {
 
   render() {
     let destination = this.props.city ? this.props.city.city : undefined //checks if city in props, if not, destination not pre-populated, if yes, prepopulated with selected city
-    console.log(this.state.width)
-    console.log(this.state.widgetScale)
     return (
       <div id="skyscanner-widget" className="flight-search-widget detail" >
         <div data-skyscanner-widget="MultiVerticalWidget" //required

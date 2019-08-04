@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Route } from 'react-router-dom'
-import Header from "./components/header"
-import Home from './components/home';
-import Results from './components/results';
-import About from './components/about';
-import Footer from './components/footer';
+import Header from "./components/header.js"
+import Home from './components/home.js';
+import Results from './components/results.js';
+import About from './components/about.js';
+import Footer from './components/footer.js';
 
 class App extends Component {
   state = {

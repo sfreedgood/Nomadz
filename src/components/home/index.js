@@ -1,7 +1,7 @@
 import React from "react"
 import "./home.css"
-import Query from "./query"
-import LocationSelectors from "./locationSelect"
+import Query from "./query.js"
+import LocationSelectors from "./locationSelect.js"
 import { Link } from "react-router-dom"
 
 //Redux
