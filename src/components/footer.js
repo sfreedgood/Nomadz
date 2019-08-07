@@ -3,7 +3,14 @@ import Logo from './logo.js';
 import "./footer.css"
 
 export default function Footer () {
-  const fontSize = "0.8rem"
+  let fontSize;
+  if (window.innerWidth > 600 ) {
+    fontSize = "0.8rem"
+  } else if ( window.innerWidth >= 400 ) {
+    fontSize = "0.6rem"
+  } else {
+    fontSize = "0.2rem"
+  }
 
   return (
     <div className="footer">

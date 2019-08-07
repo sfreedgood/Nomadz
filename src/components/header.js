@@ -7,7 +7,14 @@ import("./header.css")
 // import Home from './home';
 
 function Header () {
-  const fontSize = "1.5rem"
+  let fontSize;
+  if (window.innerWidth > 600 ) {
+    fontSize = "1.5rem"
+  } else if ( window.innerWidth >= 400 ) {
+    fontSize = "1.3rem"
+  } else {
+    fontSize = "1rem"
+  }
 
   return (
     <div className="header-nav">

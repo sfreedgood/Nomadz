@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import { Route } from 'react-router-dom'
 import Header from "./components/header.js"
-import Home from './components/home.js';
-import Results from './components/results.js';
-import About from './components/about.js';
+import Home from './components//home/index.js';
+import Results from './components/results/index.js';
+import About from './components/about/index.js';
 import Footer from './components/footer.js';
 
 class App extends Component {

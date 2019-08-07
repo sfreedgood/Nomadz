@@ -4,29 +4,29 @@
   height: 90%;
   margin: 1%;
   padding: 1%;
-  min-width: 300px;
+  width: 600px;
   align-self: center;
 }
 
 @media only screen 
-  and (min-device-width: 600px) 
+  and (min-device-width: 400px) 
   and (max-device-width: 800px) {  
     .flight-search-widget {
-      min-width: 500px;
-    }
-}
-
-@media only screen 
-  and (min-device-width: 400px) 
-  and (max-device-width: 600px) {  
-    .flight-search-widget {
-      min-width: 350px;
+      width: 520px;
     }
 }
 
 @media only screen 
   and (max-device-width: 400px) {  
     .flight-search-widget {
-      min-width: 300px;
+      height: fit-content;
+      width: 80%;
     }
 }
+
+/* @media only screen 
+  and (max-device-width: 400px) {  
+    .flight-search-widget {
+      min-width: 300px;
+    }
+} */

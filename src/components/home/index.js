@@ -58,11 +58,12 @@ const Home = (props) => {
             {allQueries}
           </div>
         </div>
-        <button className="lets-go-btn">
-          <Link to="/results">
+        
+        <Link to="/results">
+          <button className="lets-go-btn">
             LET'S GO
-          </Link>
-        </button>
+          </button>
+        </Link>
     </div>
   )
 }

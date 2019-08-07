@@ -1,10 +1,11 @@
 .about {
   min-height: 90vh;
   overflow: auto;
-  background-image: url("/assets/sunset_spires.JPG");
+  background-image: url("/assets/sunset_spires_large.JPG");
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: bottom;
+  background-position-x: left;
 }
 
 #title {
@@ -60,6 +61,10 @@
 
 @media only screen 
   and (max-device-width: 600px) {
+    .about {
+      background-image: url("/assets/sunset_spires_medium.JPG");
+    }
+
     .text-content {
       margin-bottom: 5px;
     }

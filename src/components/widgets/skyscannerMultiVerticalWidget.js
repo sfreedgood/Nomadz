@@ -1,4 +1,5 @@
 import React from "react"
+import './skyscannerWidget.css'
 
 // Documentation for widget:
 // https://partners.skyscanner.net/affiliates/widgets-documentation/flight-search-widget
@@ -11,17 +12,6 @@ function mapStateToProps (state) {
   return { city }
 };
 
-
-// const styles = {
-//   backgroundColor: "rgba(255,255,255,0.9)",
-//   display: "none",
-//   height: "90%",
-//   margin: "1%",
-//   padding: "1%",
-//   minWidth: "300px",
-//   alignSelf: "center"
-// }
-
 class MultiVerticalWidget extends React.Component {
   constructor(props) {
     super(props);
@@ -29,7 +19,7 @@ class MultiVerticalWidget extends React.Component {
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this)
   }
   
-  async componentWillMount() {
+   async componentWillMount() {
     await this.updateWindowDimensions();
     await window.addEventListener('resize', this.updateWindowDimensions);
 
@@ -42,40 +32,29 @@ class MultiVerticalWidget extends React.Component {
   
   updateWindowDimensions = async () => {
     await this.setState({ width: window.innerWidth, height: window.innerHeight });
-    await this.handleScale()
-
-  }
-
-  handleScale = () => {
-    if (this.state.width <= 400) {
-      this.setState({widgetScale: 0.5})
-    } else if (this.state.width <= 600) {
-      this.setState({widgetScale: 0.75})
-    } else {
-      this.setState({widgetScale: 1})
-    }
- 
   }
 
   render() {
     let destination = this.props.city ? this.props.city.city : undefined //checks if city in props, if not, destination not pre-populated, if yes, prepopulated with selected city
     return (
       <div id="skyscanner-widget" className="flight-search-widget detail" >
-        <div data-skyscanner-widget="MultiVerticalWidget" //required
-            data-associate-id="ABC_DEF_12345_56789" //required, need to get
-            data-locale="en-GB"
-            market="US"
-            currency="USD"
-            data-destination-name={`"${destination}"`} //this string formatting is required in order to function
-            data-multi-city-max-flights-number=""
-            data-widget-scale={`${this.state.widgetScale}`}
-            data-powered-by-size={`${this.state.widgetScale}`}
-            // data-responsive="true"
-            //  data-flight-outbound-date={departureDate}
-            //  data-flight-inbound-date={returnDate}
-            >
+        {
+          this.state.width >= 400 ?
+            <div data-skyscanner-widget="MultiVerticalWidget" //required
+              data-associate-id="ABC_DEF_12345_56789" //required, need to get
+              data-locale="en-GB"
+              market="US"
+              currency="USD"
+              data-destination-name={`"${destination}"`} //this string formatting is required in order to function
+              ></div>
+          : <div data-skyscanner-widget="LocationWidget" 
+              data-locale="en-GB"
+              data-location={`"${destination}"`} //this string formatting is required in order to function
+              data-colour="cirrus"
+              style={{marginRight: "2%"}}
+              ></div>
+        }
         </div>
-      </div>
     )
   }
 }
