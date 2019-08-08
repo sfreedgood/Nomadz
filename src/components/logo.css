@@ -1,11 +1,11 @@
 
-#logo {
+.logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-#nomad {
+.nomad {
   color: black;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13,7 +13,7 @@
   margin: 0;
 }
 
-#z {
+.z {
   color: black;
   display: -webkit-box;
   display: -ms-flexbox;

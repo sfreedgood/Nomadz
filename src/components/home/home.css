@@ -69,18 +69,23 @@
   justify-content: flex-start;
 }
 
+.home-container > a {
+  margin: 0 auto;
+  height: fit-content;
+  width: 20vw;
+}
+
 .lets-go-btn {
   font-family: "Didot";
   font-weight: 800;
-  width: 20vw;
   border: none;
   padding: 1rem 2rem;
+  width: 100%;
   margin: 0 auto;
-  margin-bottom: 5vh;
   text-decoration: none;
   background: #ffffff;
   color: #000000;
-  font-size: 1.5rem;
+  font-size: 1rem;
   cursor: pointer;
   text-align: center;
   -webkit-transition: background 250ms ease-in-out, 
@@ -113,6 +118,13 @@
       -ms-transform: scale(0.99);
           transform: scale(0.99);
 }
+@media only screen 
+  and (min-device-width: 650px) 
+  and (max-device-width: 800px) {
+    .home-container > a {
+      width: 33vw;
+    }
+}
 
 @media only screen 
   and (min-device-width: 400px) 
@@ -122,6 +134,11 @@
       -webkit-box-pack: space-evenly;
           -ms-flex-pack: space-evenly;
               justify-content: space-evenly;
+    }
+
+    .home-container > a {
+      width: 50vw;
+      margin-bottom: 10vh;
     }
 
     .home-header {
@@ -139,9 +156,9 @@
     }
 
     .lets-go-btn {
-      width: 50vw;
       padding: 0.5rem 1rem;
       font-size: 1rem;
+      align-self: center;
     }
 }
 
@@ -149,6 +166,12 @@
   and (max-device-width: 400px) {
     .home-container {
       background-image: url("/assets/rocky_ocean_medium.jpeg");
+    }
+
+    .home-container > a {
+      width: 66vw;
+      margin: auto;
+      margin-top: 5vh;
     }
 
     .home-header {
@@ -185,7 +208,6 @@
     }
 
     .lets-go-btn {
-      width: 50vw;
       margin: auto;
       padding: 0.5rem 1rem;
       font-size: 1rem;

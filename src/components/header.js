@@ -8,10 +8,10 @@ import("./header.css")
 
 function Header () {
   let fontSize;
-  if (window.innerWidth > 600 ) {
-    fontSize = "1.5rem"
-  } else if ( window.innerWidth >= 400 ) {
-    fontSize = "1.3rem"
+  if ( window.innerWidth >= 650 ) {
+    fontSize = "1.4rem"
+  } else if ( window.innerWidth >=400 ) {
+    fontSize = "1.2rem"
   } else {
     fontSize = "1rem"
   }

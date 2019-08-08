@@ -8,9 +8,9 @@ export default function Logo (props) {
   }
 
   return (
-    <div id="logo" style={fontSize}>
-      <h1 id="nomad" style={fontSize}>NOMAD</h1>
-      <h1 id="z" style={fontSize}>Z</h1>
+    <div className="logo">
+      <h1 className="nomad" style={fontSize}>NOMAD</h1>
+      <h1 className="z" style={fontSize}>Z</h1>
     </div>
   )
 }
