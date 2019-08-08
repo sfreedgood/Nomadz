@@ -6,8 +6,6 @@ function TravelerTips (props) {
   let countryURL
   let cityURL
 
-  console.log(props.city)
-
   if (props.city){
     let city = props.city.label
     cityURL = city.toLowerCase().replace(regex, "-")

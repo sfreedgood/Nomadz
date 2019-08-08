@@ -35,7 +35,7 @@ class MultiVerticalWidget extends React.Component {
   }
 
   render() {
-    let destination = this.props.city ? this.props.city.city : undefined //checks if city in props, if not, destination not pre-populated, if yes, prepopulated with selected city
+    let destination = this.props.city ? this.props.city.city : "Anywhere" //checks if city in props, if not, destination not pre-populated, if yes, prepopulated with selected city
     return (
       <div id="skyscanner-widget" className="flight-search-widget detail" >
         {
@@ -49,7 +49,7 @@ class MultiVerticalWidget extends React.Component {
               ></div>
           : <div data-skyscanner-widget="LocationWidget" 
               data-locale="en-GB"
-              data-location={`"${destination}"`} //this string formatting is required in order to function
+              data-location={`${destination}`} 
               data-colour="cirrus"
               style={{marginRight: "2%"}}
               ></div>

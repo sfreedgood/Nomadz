@@ -33,7 +33,6 @@ class Results extends Component {
 
   toggleSkyscanner = (target_id) => {
     let target = document.getElementById("skyscanner-widget")
-    console.log(target)
     if ( target_id === "skyscanner" && target.style.display === "none") {
       target.style.display = "block"
     } else {

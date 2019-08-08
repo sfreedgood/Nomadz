@@ -10,7 +10,6 @@ function VisitACity (props) {
   } else {
      destination = props.country.label
   }
-  console.log('visit a city')
 
   let destinationURL = destination.toLowerCase().replace(regex, "-")
 
@@ -28,7 +27,3 @@ function VisitACity (props) {
 }
 
 export default VisitACity
-
-
-
-// https://www.visitacity.com/en/argentina/activities/all-activities

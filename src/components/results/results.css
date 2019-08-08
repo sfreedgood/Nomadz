@@ -189,7 +189,7 @@
 @media only screen 
   and (max-device-width: 400px) {
     .results {
-      background-image: url("/assets/NomadzBackgroundSmall.jpeg");
+      background-image: url("/public/assets/NomadzBackgroundSmall.jpeg");
     }
 
     .results-header {
