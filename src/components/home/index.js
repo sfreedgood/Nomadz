@@ -2,6 +2,9 @@ import React from "react"
 import "./home.css"
 import Query from "./query.js"
 import LocationSelectors from "./locationSelect.js"
+import JSONLD from "react-structured-data"
+import { Generic } from "react-structured-data/dist/schemas"
+
 import { Link } from "react-router-dom"
 
 //Redux
@@ -31,6 +34,9 @@ const Home = (props) => {
 
   return(
     <div className="home-container">
+      {/* <JSONLD>
+        <Generic />
+      </JSONLD> */}
       <h1 className="home-header">Let's start something special</h1>
         <div className="content">
           <div className="location-display">

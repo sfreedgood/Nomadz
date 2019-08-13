@@ -12,6 +12,7 @@
     "react-scripts": "3.0.1",
     "react-select": "^3.0.4",
     "react-select-country-list": "^2.0.1",
+    "react-structured-data": "0.0.14",
     "redux": "^4.0.4"
   },
   "scripts": {

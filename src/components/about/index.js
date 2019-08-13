@@ -1,4 +1,6 @@
 import React from 'react'
+import { JSONLD } from "react-structured-data"
+import { Generic } from "react-structured-data/dist/schemas"
 import NomadzInstaHash from './nomadzInstagramHashtag.js'
 import NomadzInstaAt from './nomadzInstagramAt.js'
 import './about.css'
@@ -8,6 +10,18 @@ export default function About () {
 
   return (
     <div className="about">
+      <JSONLD>
+        <Generic type="about" jsonldtype="AboutPage" >
+          <Generic type="mainEntity" jsonldtype="VideoObject" 
+                  schema={{
+                    name: "Introduction to Nomadz",
+                    description: "Promotional Video explaining Nomadz Mission",
+                    thumbnailUrl: "http://nomadz.us/assets/youtubeThumbnail.jpg",
+                    uploadDate: "2019-04-18"
+                  }}
+          />
+        </Generic>
+      </JSONLD>
       <h1 id="title">OUR STORY STARTS HERE</h1>
       <div className="youtube-container">
         <iframe title="about nomadz"
