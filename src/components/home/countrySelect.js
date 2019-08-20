@@ -4,10 +4,12 @@ import Select from 'react-select'
 import countryList from "../../redux/countryList.js" //custom made options for use with budget widget
 
 function CountrySelector (props) {
+
     return (
       <Select
         onChange={props.setSearchParam}
         options={countryList}
+        isClearable={true}
         placeholder="Country"
       />
     )

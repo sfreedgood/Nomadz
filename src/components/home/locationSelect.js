@@ -28,7 +28,18 @@ class LocationSelectors extends Component {
 
   setSearchParam = (event) => {
     let selection = event //country list event is an object, all other event are standard targets
-    if (event.city) {
+    console.log(event)
+    if (event === null) { // prevents clearing dropdown from erroring out
+      //removing option from dropdown also deletes it from Redux, and resets the cities list to topDestinations
+      //to have clearing country dropdown default to previous selection and give option to choose new country, comment out code in this scope
+      this.setState({
+        cities: topDestinations,
+        city: null,
+        country: null
+      })
+      this.props.setCity(null)
+      this.props.setCountry(null)
+    } else if (event.city) {
       this.setState({ city: selection })
       this.props.setCity(selection)
       this.props.setCountry(selection)
