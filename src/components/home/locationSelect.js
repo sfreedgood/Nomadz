@@ -31,7 +31,7 @@ class LocationSelectors extends Component {
     console.log(event)
     if (event === null) { // prevents clearing dropdown from erroring out
       //removing option from dropdown also deletes it from Redux, and resets the cities list to topDestinations
-      //to have clearing country dropdown default to previous selection and give option to choose new country, comment out code in this scope
+      //to have clearing dropdown default to previous selection, comment out code in this scope
       this.setState({
         cities: topDestinations,
         city: null,

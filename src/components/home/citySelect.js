@@ -7,6 +7,7 @@ function CitySelector (props) {
     <Select
       options={props.cities}
       onChange={props.setSearchParam}
+      isClearable={true}
       placeholder="City"
     />
   )
