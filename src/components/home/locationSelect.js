@@ -1,13 +1,12 @@
 import React, { Component } from "react"
 import CountrySelector from "./countrySelect.js";
 import CitySelector from "./citySelect.js"
-import topDestinations from "../../redux/top100Destinations.js"
+import topDestinations from "../../data/top100Destinations"
 import "./home.css"
-
-
-
-//Redux
 import { connect } from "react-redux"
+import { regionOptionsCity, regionOptionsCountry } from "../../data/data" //custom made options for use with budget widget
+import { rankInsertionSort, sortCompare } from '../../data/sorts'
+import countryList from "../../data/countryList.js";
 
 function mapStateToProps (state) {
   const { country, city } = state.searchParams
@@ -23,8 +22,8 @@ function mapDispatchToProps (dispatch) { //list of action-creators to be dispatc
 
 class LocationSelectors extends Component {
   state = { 
-    country: false
-   }
+    country: false,
+  }
 
   setSearchParam = (event) => {
     let selection = event //country list event is an object, all other event are standard targets
@@ -50,31 +49,65 @@ class LocationSelectors extends Component {
   }
 
   componentDidMount = () => {
-    this.setState(prevState => ({ cities: topDestinations }))
+    this.setOptions()
   }
 
   getCities = (event) => {
+    let data = this.state.cities
     if (event.label) {
-      let cities = topDestinations.filter( item => {
-        if ( event.value === item.countryCode ){
-          return item
-        } //loops though top destination, if country matches selected country, returns destination
+      let cities = data.filter( item => {
+        return event.value === item.countryCode ? true : false //loops though top destination, if country matches selected country, returns destination
       })
-      this.setState(prevState => ({ cities }))
+      this.setState(prevState => ({ cities: cities }))
     } else {
-      this.setState(prevState => ({ cities: topDestinations }))
+      this.setState(prevState => ({ cities: data }))
     }
   }
 
-  
+  setOptions = (event) => {
+    let filter = event ? event.currentTarget.name : null
+    let cities = topDestinations
+    let countries = countryList
+    if (filter === "ranked") {
+      cities = regionOptionsCity.map( city => rankInsertionSort(city.options))
+      countries = regionOptionsCountry.map( country => rankInsertionSort(country.options))
+      this.setState( prevState => ({
+        cities,
+        countries
+      }))
+    } else if (filter === "alphabetical") {
+      cities = regionOptionsCity.map( city => city.options.sort(sortCompare))
+      countries = regionOptionsCountry.map( country => country.options.sort(sortCompare) )
+      this.setState( prevState => ({
+        cities,
+        countries
+      }))
+    } else {
+      this.setState( prevState => ({
+        cities,
+        countries
+      }))
+    }
+  }
 
   render() {
+    console.log(this.state.cities)
     return (
       <div id="location-selectors" className="query">
         <h1 className="query-title">WHERE?</h1>
         <div className="location-dropdowns">
+          <div className="toggleSort">
+            <button onClick={this.setOptions}
+              className="order-options"
+              name="alphabetical"> Alphabetical
+            </button>
+            <button onClick={this.setOptions}
+              className="order-options"
+              name="ranked"> Ranked
+            </button>
+          </div>
           <div className="location-sub-query">
-            <CountrySelector setSearchParam={this.setSearchParam} />
+            <CountrySelector countryOptions={this.state.countries} setSearchParam={this.setSearchParam} />
           </div>
           <div className="location-sub-query">
             <CitySelector cities={this.state.cities} type={this.props.query} country={this.state.country} setSearchParam={this.setSearchParam} />

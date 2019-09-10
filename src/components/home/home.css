@@ -43,7 +43,7 @@
 .location-display {
   height: -webkit-fit-content;
   height: -moz-fit-content;
-  height: fit-content;
+  height: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -181,6 +181,10 @@
 
     .current-selection {
       font-size: 1.3rem;
+    }
+
+    .location-display {
+      height: 1.3rem;
     }
 
     .query-container {

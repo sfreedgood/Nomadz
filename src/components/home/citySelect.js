@@ -1,14 +1,22 @@
 import React from 'react';
-import Select from 'react-select'
+import Select, { components } from 'react-select'
+import makeAnimated from 'react-select/animated'
 
 function CitySelector (props) {
 
+  const Group = props => (
+    <div>
+      <components.Group {...props} />
+    </div>
+  );
+
   return (
     <Select
-      options={props.cities}
-      onChange={props.setSearchParam}
+      components={{ Group }}
       isClearable={true}
       placeholder="City"
+      onChange={props.setSearchParam}
+      options={props.cities}
     />
   )
   
