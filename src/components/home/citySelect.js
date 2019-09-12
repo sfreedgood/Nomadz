@@ -1,22 +1,33 @@
 import React from 'react';
 import Select, { components } from 'react-select'
-import makeAnimated from 'react-select/animated'
 
 function CitySelector (props) {
 
-  const Group = props => (
+  const GroupHeading = props => (
     <div>
-      <components.Group {...props} />
+      <components.GroupHeading {...props} />
     </div>
   );
 
   return (
     <Select
-      components={{ Group }}
+      options={props.cityOptions}
+      components={{ GroupHeading }}
       isClearable={true}
       placeholder="City"
       onChange={props.setSearchParam}
-      options={props.cities}
+      styles={{
+        groupHeading: base => ({
+          ...base,
+          margin: '0 auto',
+          padding: '5px 0',
+          textAlign: 'center',
+          fontSize: '1rem',
+          color: 'rgb(150,150,150)',
+          fontWeight: 'bolder',
+          textDecoration: 'underline'
+        }),
+      }}
     />
   )
   

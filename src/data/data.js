@@ -16,38 +16,47 @@ const americasCountries = countryList.filter( country => {
 
 // asia
 const asiaCities = topCities.filter( city => {
-  return city.region === 'asia' ? true : false 
+  return city.region === 'Asia' ? true : false 
 })
 
 const asiaCountries = countryList.filter( country => {
-  return country.region === 'asia' ? true : false
+  return country.region === 'Asia' ? true : false
+})
+
+// oceania
+const oceaniaCities = topCities.filter( city => {
+  return city.region === 'Oceania' ? true : false 
+})
+
+const oceaniaCountries = countryList.filter( country => {
+  return country.region === 'Oceania' ? true : false
 })
 
 // africa
 const africaCities = topCities.filter( city => {
-  return city.region === 'africa' ? true : false
+  return city.region === 'Africa' ? true : false
 })
 
 const africaCountries = countryList.filter( country => {
-  return country.region === 'africa' ? true : false
+  return country.region === 'Africa' ? true : false
 })
 
 // middleEast
 const middleEastCities = topCities.filter( city => {
-  return city.region === 'middleEast' ? true : false
+  return city.region === 'Middle East' ? true : false
 })
 
 const middleEastCountries = countryList.filter( country => {
-  return country.region === 'middleEast' ? true : false
+  return country.region === 'Middle East' ? true : false
 })
 
 // europe
 const europeCities = topCities.filter( city => {
-  return city.region === 'europe' ? true : false
+  return city.region === 'Europe' ? true : false
 })
 
 const europeCountries = countryList.filter( country => {
-  return country.region === 'europe' ? true : false
+  return country.region === 'Europe' ? true : false
 })
 
 // __data sets__
@@ -59,6 +68,10 @@ export const regionOptionsCity = [
   {
     label: 'Asia',
     options: asiaCities
+  },
+  {
+    label: 'Oceania',
+    options: oceaniaCities
   },
   {
     label: 'Middle East & Africa',
@@ -78,6 +91,10 @@ export const regionOptionsCountry = [
   {
     label: 'Asia',
     options: asiaCountries
+  },
+  {
+    label: 'Oceania',
+    options: oceaniaCountries
   },
   {
     label: 'Middle East & Africa',

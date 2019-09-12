@@ -64,20 +64,37 @@ class LocationSelectors extends Component {
     }
   }
 
+  //sets city and country options according to selected sort, accounting for regional subdivisions
   setOptions = (event) => {
     let filter = event ? event.currentTarget.name : null
     let cities = topDestinations
     let countries = countryList
     if (filter === "ranked") {
-      cities = regionOptionsCity.map( city => rankInsertionSort(city.options))
-      countries = regionOptionsCountry.map( country => rankInsertionSort(country.options))
+      cities = regionOptionsCity.map( city => {
+        return {
+          label: city.label, options: rankInsertionSort(city.options)
+        }
+      })
+      countries = regionOptionsCountry.map( country => {
+        return {
+          label: country.label, options: rankInsertionSort(country.options)
+        }
+      })
       this.setState( prevState => ({
         cities,
         countries
       }))
     } else if (filter === "alphabetical") {
-      cities = regionOptionsCity.map( city => city.options.sort(sortCompare))
-      countries = regionOptionsCountry.map( country => country.options.sort(sortCompare) )
+      cities = regionOptionsCity.map( city => {
+        return {
+          label: city.label, options: city.options.sort(sortCompare)
+        }
+      })
+      countries = regionOptionsCountry.map( country => {
+        return {
+          label: country.label, options: country.options.sort(sortCompare)
+        } 
+      })
       this.setState( prevState => ({
         cities,
         countries
@@ -92,6 +109,7 @@ class LocationSelectors extends Component {
 
   render() {
     console.log(this.state.cities)
+    console.log(this.state.countries)
     return (
       <div id="location-selectors" className="query">
         <h1 className="query-title">WHERE?</h1>
@@ -110,7 +128,7 @@ class LocationSelectors extends Component {
             <CountrySelector countryOptions={this.state.countries} setSearchParam={this.setSearchParam} />
           </div>
           <div className="location-sub-query">
-            <CitySelector cities={this.state.cities} type={this.props.query} country={this.state.country} setSearchParam={this.setSearchParam} />
+            <CitySelector cityOptions={this.state.cities} type={this.props.query} country={this.state.country} setSearchParam={this.setSearchParam} />
           </div>
         </div>
       </div>
