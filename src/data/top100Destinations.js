@@ -49,7 +49,7 @@ let topCities = [
     countryCode: "UK",
     rank: 3,
     rankYear: 2018,
-    region: ""
+    region: "Europe"
   },
   {
     label: "Macau",
@@ -119,7 +119,7 @@ let topCities = [
     countryCode: "TR",
     rank: 16,
     rankYear: 2018,
-    region: ""
+    region: "Asia"
   },
   {
     label: "Paris",
@@ -129,7 +129,7 @@ let topCities = [
     countryCode: "FR",
     rank: 6,
     rankYear: 2018,
-    region: ""
+    region: "Europe"
   },
   {
     label: "Istanbul",
@@ -139,7 +139,7 @@ let topCities = [
     countryCode: "TR",
     rank: 12,
     rankYear: 2018,
-    region: ""
+    region: "Asia"
   },
   {
     label: "Rome",
@@ -149,7 +149,7 @@ let topCities = [
     countryCode: "IT",
     rank: 15,
     rankYear: 2018,
-    region: ""
+    region: "Europe"
   },
   {
     label: "Dubai",
@@ -159,7 +159,7 @@ let topCities = [
     countryCode: "AE",
     rank: 7,
     rankYear: 2018,
-    region: ""
+    region: "Middle East"
   },
   {
     label: "Guangzhou",
@@ -189,7 +189,7 @@ let topCities = [
     countryCode: "SA",
     rank: 21,
     rankYear: 2018,
-    region: ""
+    region: "Middle East"
   },
   {
     label: "Pattaya",
@@ -219,7 +219,7 @@ let topCities = [
     countryCode: "CZ",
     rank: 20,
     rankYear: 2018,
-    region: ""
+    region: "Europe"
   },
   {
     label: "Shanghai",
@@ -259,7 +259,7 @@ let topCities = [
     countryCode: "ES",
     rank: 31,
     rankYear: 2018,
-    region: ""
+    region: "Europe"
   },
   {
     label: "Moscow",
@@ -269,7 +269,7 @@ let topCities = [
     countryCode: "RU",
     rank: 48,
     rankYear: 2018,
-    region: ""
+    region: "Europe"
   },
   {
     label: "Beijing",
@@ -299,7 +299,7 @@ let topCities = [
     countryCode: "HU",
     rank: 57,
     rankYear: 2018,
-    region: ""
+    region: "Europe"
   },
   {
     label: "Vienna",
@@ -309,7 +309,7 @@ let topCities = [
     countryCode: "AT",
     rank: 34,
     rankYear: 2018,
-    region: ""
+    region: "Europe"
   },
   {
     label: "Amsterdam",
@@ -319,7 +319,7 @@ let topCities = [
     countryCode: "NL",
     rank: 23,
     rankYear: 2018,
-    region: ""
+    region: "Europe"
   },
   {
     label: "Sofia",
@@ -329,7 +329,7 @@ let topCities = [
     countryCode: "BG",
     rank: null,
     rankYear: 2015,
-    region: ""
+    region: "Europe"
   },
   {
     label: "Madrid",
@@ -339,7 +339,7 @@ let topCities = [
     countryCode: "ES",
     rank: 43,
     rankYear: 2018,
-    region: ""
+    region: "Europe"
   },
   {
     label: "Orlando",
@@ -359,7 +359,7 @@ let topCities = [
     countryCode: "VN",
     rank: 39,
     rankYear: 2018,
-    region: ""
+    region: "Asia"
 },
   {
     label: "Lima",
@@ -379,7 +379,7 @@ let topCities = [
     countryCode: "DE",
     rank: 36,
     rankYear: 2018,
-    region: ""
+    region: "Europe"
   },
   {
     label: "Athens",
@@ -389,7 +389,7 @@ let topCities = [
     countryCode: "GR",
     rank: 49,
     rankYear: 2018,
-    region: ""
+    region: "Europe"
   },
   {
     label: "Heraklion",
@@ -399,7 +399,7 @@ let topCities = [
     countryCode: "GR",
     rank: 68,
     rankYear: 2018,
-    region: ""
+    region: "Europe"
   },
   {
     label: "Rhodes",
@@ -409,7 +409,7 @@ let topCities = [
     countryCode: "GR",
     rank: 99,
     rankYear: 2018,
-    region: ""
+    region: "Europe"
   },
   {
     label: "Tokyo",
@@ -459,7 +459,7 @@ let topCities = [
     countryCode: "PL",
     rank: 74,
     rankYear: 2018,
-    region: ""
+    region: "Europe"
   },
   {
     label: "Krakow",
@@ -469,7 +469,7 @@ let topCities = [
     countryCode: "PL",
     rank: 75,
     rankYear: 2018,
-    region: ""
+    region: "Europe"
   },
   {
     label: "Chennai",
@@ -489,7 +489,7 @@ let topCities = [
     countryCode: "EG",
     rank: 50,
     rankYear: 2018,
-    region: ""
+    region: "Africa"
   },
   {
     label: "Nairobi",
@@ -499,7 +499,7 @@ let topCities = [
     countryCode: "KE",
     rank: null,
     rankYear: 2015,
-    region: ""
+    region: "Africa"
   },
   {
     label: "Hangzhou",
@@ -519,7 +519,7 @@ let topCities = [
     countryCode: "IT",
     rank: 32,
     rankYear: 2018,
-    region: ""
+    region: "Europe"
   },
   {
     label: "San Francisco",
@@ -549,7 +549,7 @@ let topCities = [
     countryCode: "IT",
     rank: 41,
     rankYear: 2018,
-    region: ""
+    region: "Europe"
   },
   {
     label: "Mexico City" ,
@@ -569,7 +569,7 @@ let topCities = [
     countryCode: "IE",
     rank: 46,
     rankYear: 2018,
-    region: ""
+    region: "Europe"
   },
   {
     label: "Seoul",
@@ -599,7 +599,7 @@ let topCities = [
     countryCode: "TR",
     rank: null,
     rankYear: null,
-    region: ""
+    region: "Asia"
   },
   {
     label: "Mumbai",
@@ -659,7 +659,7 @@ let topCities = [
     countryCode: "RU",
     rank: 59,
     rankYear: 2018,
-    region: ""
+    region: "Europe"
   },
   {
     label: "Burgas",
@@ -669,7 +669,7 @@ let topCities = [
     countryCode: "BG",
     rank: null,
     rankYear: null,
-    region: ""
+    region: "Europe"
   },
   {
     label: "Sydney",
@@ -679,7 +679,7 @@ let topCities = [
     countryCode: "AU",
     rank: 55,
     rankYear: 2018,
-    region: ""
+    region: "Oceania"
   },
   {
     label: "Djerba",
@@ -689,7 +689,7 @@ let topCities = [
     countryCode: "TN",
     rank: null,
     rankYear: null,
-    region: ""
+    region: "Africa"
   },
   {
     label: "Munich",
@@ -699,7 +699,7 @@ let topCities = [
     countryCode: "DE",
     rank: 56,
     rankYear: 2018,
-    region: ""
+    region: "Europe"
   },
   {
     label: "Johannesburg",
@@ -709,7 +709,7 @@ let topCities = [
     countryCode: "ZA",
     rank: 38,
     rankYear: 2018,
-    region: ""
+    region: "Africa"
   },
   {
     label: "Cancun",
@@ -729,7 +729,7 @@ let topCities = [
     countryCode: "TR",
     rank: null,
     rankYear: null,
-    region: ""
+    region: "Asia"
   },
   {
     label: "Suzhou",
@@ -739,7 +739,7 @@ let topCities = [
     countryCode: "CN",
     rank: null,
     rankYear: null,
-    region: ""
+    region: "Asia"
   },
   {
     label: "Bucharest",
@@ -749,7 +749,7 @@ let topCities = [
     countryCode: "RO",
     rank: null,
     rankYear: null,
-    region: ""
+    region: "Europe"
   },
   {
     label: "Punta Cana",
@@ -769,7 +769,7 @@ let topCities = [
     countryCode: "DK",
     rank: 72,
     rankYear: 2018,
-    region: ""
+    region: "Europe"
   },
   {
     label: "Agra",
@@ -799,7 +799,7 @@ let topCities = [
     countryCode: "BE",
     rank: 70,
     rankYear: 2018,
-    region: ""
+    region: "Europe"
   },
   {
     label: "Nice",
@@ -809,7 +809,7 @@ let topCities = [
     countryCode: "FR",
     rank: 92,
     rankYear: 2018,
-    region: ""
+    region: "Europe"
   },
   {
     label: "Chiang Mai",
@@ -829,7 +829,7 @@ let topCities = [
     countryCode: "EG",
     rank: null,
     rankYear: null,
-    region: ""
+    region: "Africa"
   },
   {
     label: "Lisbon",
@@ -839,7 +839,7 @@ let topCities = [
     countryCode: "PT",
     rank: 62,
     rankYear: 2018,
-    region: ""
+    region: "Europe"
   },
   {
     label: "Porto",
@@ -849,7 +849,7 @@ let topCities = [
     countryCode: "PT",
     rank: 96,
     rankYear: 2018,
-    region: ""
+    region: "Europe"
   },
   {
     label: "East Province",
@@ -859,7 +859,7 @@ let topCities = [
     countryCode: "SA",
     rank: null,
     rankYear: null,
-    region: ""
+    region: "Middle East"
   },
   {
     label: "Marrakech",
@@ -869,7 +869,7 @@ let topCities = [
     countryCode: "MA",
     rank: 78,
     rankYear: 2018,
-    region: ""
+    region: "Africa"
   },
   {
     label: "Jakarta",
@@ -899,7 +899,7 @@ let topCities = [
     countryCode: "BH",
     rank: null,
     rankYear: null,
-    region: ""
+    region: "Middle East"
   },
   {
     label: "Hanoi",
@@ -966,7 +966,7 @@ let topCities = [
     countryCode: "NZ",
     rank: 79,
     rankYear: 2018,
-    region: ""
+    region: "Oceania"
   },
   {
     label: "Siem Reap",
@@ -996,7 +996,7 @@ let topCities = [
     countryCode: "TN",
     rank: null,
     rankYear: null,
-    region: ""
+    region: "Africa"
   },
   {
     label: "Amman",
@@ -1006,7 +1006,7 @@ let topCities = [
     countryCode: "JO",
     rank: null,
     rankYear: null,
-    region: ""
+    region: "Middle East"
   },
   {
     label: "Vancouver",
@@ -1026,7 +1026,7 @@ let topCities = [
     countryCode: "AE",
     rank: 95,
     rankYear: 2018,
-    region: ""
+    region: "Middle East"
   },
   {
     label: "Kiev",
@@ -1036,7 +1036,7 @@ let topCities = [
     countryCode: "UA",
     rank: null,
     rankYear: null,
-    region: ""
+    region: "Europe"
   },
   {
     label: "Lviv",
@@ -1046,7 +1046,7 @@ let topCities = [
     countryCode: "UA",
     rank: 80,
     rankYear: 2018,
-    region: ""
+    region: "Europe"
   },
   {
     label: "Doha",
@@ -1056,7 +1056,7 @@ let topCities = [
     countryCode: "QR",
     rank: 98,
     rankYear: 2018,
-    region: ""
+    region: "Middle East"
   },
   {
     label: "Florence",
@@ -1066,7 +1066,7 @@ let topCities = [
     countryCode: "IT",
     rank: 47,
     rankYear: 2018,
-    region: ""
+    region: "Europe"
   },
   {
     label: "Rio de Janeiro",
@@ -1086,7 +1086,7 @@ let topCities = [
     countryCode: "AU",
     rank: 76,
     rankYear: 2018,
-    region: ""
+    region: "Oceania"
   },
   {
     label: "Washington",
@@ -1106,7 +1106,7 @@ let topCities = [
     countryCode: "SA",
     rank: 40,
     rankYear: 2018,
-    region: ""
+    region: "Middle East"
   },
   {
     label: "Dammam City",
@@ -1116,7 +1116,7 @@ let topCities = [
     countryCode: "SA",
     rank: 61,
     rankYear: 2018,
-    region: ""
+    region: "Middle East"
   },
   {
     label: "Stockholm",
@@ -1126,7 +1126,7 @@ let topCities = [
     countryCode: "SE",
     rank: 85,
     rankYear: 2018,
-    region: ""
+    region: "Europe"
   },
   {
     label: "Christchurch",
@@ -1136,7 +1136,7 @@ let topCities = [
     countryCode: "NZ",
     rank: null,
     rankYear: null,
-    region: ""
+    region: "Oceania"
   },
   {
     label: "Frankfurt",
@@ -1146,7 +1146,7 @@ let topCities = [
     countryCode: "DE",
     rank: 83,
     rankYear: 2018,
-    region: ""
+    region: "Europe"
   },
   {
     label: "Baku",
@@ -1156,7 +1156,7 @@ let topCities = [
     countryCode: "AZ",
     rank: null,
     rankYear: null,
-    region: ""
+    region: "Asia"
   },
   {
     label: "Sao Paulo",
@@ -1176,7 +1176,7 @@ let topCities = [
     countryCode: "ZW",
     rank: null,
     rankYear: null,
-    region: ""
+    region: "Africa"
   },
   {
     label: "Kolkatta",
@@ -1196,7 +1196,7 @@ let topCities = [
     countryCode: "IL",
     rank: 63,
     rankYear: 2018,
-    region: ""
+    region: "MIddle East"
   },
   {
     label: "Tel Aviv",
@@ -1206,7 +1206,7 @@ let topCities = [
     countryCode: "IL",
     rank: 81,
     rankYear: 2018,
-    region: ""
+    region: "MIddle East"
   },
   {
     label: "Nanjing",

@@ -114,7 +114,7 @@ class LocationSelectors extends Component {
       <div id="location-selectors" className="query">
         <h1 className="query-title">WHERE?</h1>
         <div className="location-dropdowns">
-          <div className="toggleSort">
+          <div className="toggle-sort">
             <button onClick={this.setOptions}
               className="order-options"
               name="alphabetical"> Alphabetical

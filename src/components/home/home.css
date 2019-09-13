@@ -38,6 +38,7 @@
 .query-title {
   font-size: 1.3rem;
   background-color: rgba(255,255,255);
+  border-radius: 3px;
 }
 
 .location-display {
@@ -75,6 +76,18 @@
   width: 20vw;
 }
 
+.toggle-sort {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+}
+
+.toggle-sort > button {
+  font-family: "Didot";
+  width: 50%;
+  border-radius: 3px;
+}
+
 .lets-go-btn {
   font-family: "Didot";
   font-weight: 800;
@@ -103,21 +116,6 @@
   -moz-appearance: none;
 }
 
-.lets-go-btn:hover,
-.lets-go-btn:focus {
-  background: #93c2fb;
-}
-
-.lets-go-btn:focus {
-  outline: 1px solid #fff;
-  outline-offset: -4px;
-}
-
-.lets-go-btn:active {
-  -webkit-transform: scale(0.99);
-      -ms-transform: scale(0.99);
-          transform: scale(0.99);
-}
 @media only screen 
   and (min-device-width: 650px) 
   and (max-device-width: 800px) {
@@ -154,6 +152,12 @@
       width: 40vw;
       padding-top: 0;
     }
+
+    /* .toggle-sort {
+      display: flex;
+      width: 100%;
+      flex-flow: column wrap;
+    } */
 
     .lets-go-btn {
       padding: 0.5rem 1rem;
