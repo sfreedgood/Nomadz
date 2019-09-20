@@ -32,7 +32,9 @@
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin-top: 3%;
-  align-items: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .query-title {
@@ -63,31 +65,50 @@
 }
 
 .query {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   margin-bottom: 3%;
   width: 20vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column;
-  justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .home-container > a {
   margin: 0 auto;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   width: 20vw;
 }
 
 .toggle-sort {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 
 .toggle-sort > button {
   font-family: "Didot";
   width: 50%;
   font-size: 1em;
-  hyphens: auto;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
 }
 
 .lets-go-btn {
@@ -127,12 +148,16 @@
     }
 
     .toggle-sort {
-      flex-flow: column wrap;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: column wrap;
+              flex-flow: column wrap;
     }
 
     .toggle-sort > button {
        width: 100%;
-}   }
+    }   
+}
 
 
 @media only screen 
@@ -186,7 +211,9 @@
     .lets-go-btn {
       padding: 0.5rem 1rem;
       font-size: 1rem;
-      align-self: center;
+      -ms-flex-item-align: center;
+          -ms-grid-row-align: center;
+          align-self: center;
     }
 }
 
@@ -212,7 +239,16 @@
     }
 
     .location-display {
-      height: 1rem;
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin-bottom: 5%;
     }
 
     .query-container {
@@ -220,16 +256,30 @@
     }
 
     .location-query {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
       width: 66%;
     }
 
     .location-dropdowns {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-flow: row wrap;
-      justify-content: space-between;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: row wrap;
+              flex-flow: row wrap;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
     }
 
     .location-sub-query {
@@ -237,6 +287,8 @@
     }
 
     .query {
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
       height: fit-content;
       width: 75vw;
       padding-top: 0;
@@ -249,9 +301,11 @@
     }
 
     .toggle-sort {
-      flex-flow: row wrap;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: row wrap;
+              flex-flow: row wrap;
       width: 33%;
-
     }
 
     .toggle-sort > button {
