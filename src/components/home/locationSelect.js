@@ -7,6 +7,7 @@ import { connect } from "react-redux"
 import { regionOptionsCity, regionOptionsCountry } from "../../data/data" //custom made options for use with budget widget
 import { rankInsertionSort, sortCompare } from '../../data/sorts'
 import countryList from "../../data/countryList.js";
+import { relativeTimeThreshold } from "moment";
 
 function mapStateToProps (state) {
   const { country, city } = state.searchParams
@@ -66,9 +67,10 @@ class LocationSelectors extends Component {
 
   //sets city and country options according to selected sort, accounting for regional subdivisions
   setOptions = (event) => {
-    let filter = event ? event.currentTarget.name : null
+    let filter = event ? event.target.name : null
     let cities = topDestinations
     let countries = countryList
+
     if (filter === "ranked") {
       cities = regionOptionsCity.map( city => {
         return {
@@ -108,27 +110,27 @@ class LocationSelectors extends Component {
   }
 
   render() {
-    console.log(this.state.cities)
-    console.log(this.state.countries)
     return (
       <div id="location-selectors" className="query">
         <h1 className="query-title">WHERE?</h1>
         <div className="location-dropdowns">
-          <div className="toggle-sort">
-            <button onClick={this.setOptions}
+          <div onClick={this.setOptions} className="toggle-sort">
+            <button 
               className="order-options"
-              name="alphabetical"> Alphabetical
+              name="alphabetical"> ABC
             </button>
-            <button onClick={this.setOptions}
+            <button 
               className="order-options"
               name="ranked"> Ranked
             </button>
           </div>
-          <div className="location-sub-query">
-            <CountrySelector countryOptions={this.state.countries} setSearchParam={this.setSearchParam} />
-          </div>
-          <div className="location-sub-query">
-            <CitySelector cityOptions={this.state.cities} type={this.props.query} country={this.state.country} setSearchParam={this.setSearchParam} />
+          <div className="location-query">
+            <div className="location-sub-query">
+              <CountrySelector countryOptions={this.state.countries} setSearchParam={this.setSearchParam} />
+            </div>
+            <div className="location-sub-query">
+              <CitySelector cityOptions={this.state.cities} type={this.props.query} country={this.state.country} setSearchParam={this.setSearchParam} />
+            </div>
           </div>
         </div>
       </div>
